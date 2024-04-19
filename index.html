@@ -1,11 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Search and Buttons</title>
+    <style>
+        .container {
+            text-align: left;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .search-bar {
+            width: 100px;
+            height: 30px;
+            margin-bottom: 20px;
+            transition: width 0.3s ease;
+        }
+        .search-bar:focus {
+            width: 200px; /* Increase the width on focus */
+        }
+        .button {
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            background-color: #fda10191;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Add transform transition */
+            border-radius: 10%;
+            opacity: 1; /* Set opacity to 1 for buttons to be visible by default */
+            display: block; /* Set display to block for buttons to be visible by default */
+        }
+        .button.fade-in {
+            opacity: 1;
+            display: block;
+        }
+        .button.fade-out {
+            opacity: 0;
+            display: none;
+        }
+        .button:hover {
+            background-color: #fda101; /* Change the background color on hover */
+            transform: translateY(-5px); /* Add floating effect */
+        }
+        /* Add gradient header style */
+        header {
+            background: linear-gradient(to bottom, #E89C3A, #00732D);
+            padding: 20px;
+            color: white;
+            font-size: 24px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            .container {
+                margin-top: 50px;
+            }
+            .search-bar {
+                width: 200px;
+            }
+            .button {
+                width: 80px;
+                height: 40px;
+                margin: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>try github</p>
+    <header>Blue Header</header> <!-- Add the header element here -->
+    <div class="container">
+        <input type="text" id="search" class="search-bar" placeholder="Search..." oninput="filterButtons()">
+        <br>
+        <button class="button" id="button1" onclick="searchButton(1)">Button 1</button>
+        <button class="button" id="button2" onclick="searchButton(2)">Button 2</button>
+        <button class="button" id="button3" onclick="searchButton(3)">Button 3</button>
+        <button class="button" id="button4" onclick="searchButton(4)">Button 4</button>
+        <button class="button" id="button5" onclick="searchButton(5)">Button 5</button>
+    </div>
+
+    <script>
+        function filterButtons() {
+            var searchInput = document.getElementById("search").value;
+            var buttons = document.getElementsByClassName("button");
+            
+            for (var i = 0; i < buttons.length; i++) {
+                var button = buttons[i];
+                if (button.id.includes(searchInput)) {
+                    if (button.classList.contains("fade-out")) {
+                        button.classList.remove("fade-out");
+                    }
+                    button.classList.add("fade-in");
+                } else {
+                    if (button.classList.contains("fade-in")) {
+                        button.classList.remove("fade-in");
+                    }
+                    button.classList.add("fade-out");
+                }
+            }
+        }
+
+        function searchButton(buttonNumber) {
+            var searchInput = document.getElementById("search").value;
+            if (searchInput === buttonNumber.toString()) {
+                alert("Matched Button " + buttonNumber);
+            } else {
+                alert("No match found");
+            }
+        }
+    </script>
 </body>
 </html>
