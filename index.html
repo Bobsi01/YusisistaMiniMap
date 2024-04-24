@@ -2,110 +2,91 @@
 <html>
 <head>
     <title>Search and Buttons</title>
-    <style>
-        .container {
-            text-align: left;
-            margin-top: 100px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-        .search-bar {
-            width: 100px;
-            height: 30px;
-            margin-bottom: 20px;
-            transition: width 0.3s ease;
-        }
-        .search-bar:focus {
-            width: 200px; /* Increase the width on focus */
-        }
-        .button {
-            width: 100px;
-            height: 50px;
-            margin: 10px;
-            background-color: #fda10191;
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Add transform transition */
-            border-radius: 10%;
-            opacity: 1; /* Set opacity to 1 for buttons to be visible by default */
-            display: block; /* Set display to block for buttons to be visible by default */
-        }
-        .button.fade-in {
-            opacity: 1;
-            display: block;
-        }
-        .button.fade-out {
-            opacity: 0;
-            display: none;
-        }
-        .button:hover {
-            background-color: #fda101; /* Change the background color on hover */
-            transform: translateY(-5px); /* Add floating effect */
-        }
-        /* Add gradient header style */
-        header {
-            background: linear-gradient(to bottom, #E89C3A, #00732D);
-            padding: 20px;
-            color: white;
-            font-size: 24px;
-        }
-
-        /* Responsive styles */
-        @media (max-width: 600px) {
-            .container {
-                margin-top: 50px;
-            }
-            .search-bar {
-                width: 200px;
-            }
-            .button {
-                width: 80px;
-                height: 40px;
-                margin: 5px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>Blue Header</header> <!-- Add the header element here -->
-    <div class="container">
+    <header>Blue Header</header>
+    
+   
+    <div class="btncontainer">
+        
+
+        <!-- Input field for search (removed oninput attribute) -->
         <input type="text" id="search" class="search-bar" placeholder="Search..." oninput="filterButtons()">
         <br>
-        <button class="button" id="button1" onclick="searchButton(1)">Button 1</button>
-        <button class="button" id="button2" onclick="searchButton(2)">Button 2</button>
-        <button class="button" id="button3" onclick="searchButton(3)">Button 3</button>
-        <button class="button" id="button4" onclick="searchButton(4)">Button 4</button>
-        <button class="button" id="button5" onclick="searchButton(5)">Button 5</button>
+        <!-- Buttons with onclick handlers -->
+        <button class="button" id="button1" onclick="searchButton(1)">1st floor</button>
+        <br>
+        <button class="button" id="button2" onclick="searchButton(2)">2nd floor</button>
+        <br>
+        <button class="button" id="button3" onclick="searchButton(3)">3rd floor</button>
+        <br>
+        <button class="button" id="button4" onclick="searchButton(4)">4th floor</button>
+        <br>
+        <button class="button" id="button5" onclick="searchButton(5)">5th floor</button>
     </div>
+        <div class="box" id="box5"></div> <!-- SOCIAL HELL -->
+    <div class="bxcontainer">
+        <!-- Add the boxes here -->
+       
+        <div class="box" id="box4"></div><!-- 4TH FLOOR -->
+        <div class="box" id="box3"></div><!-- 3RD FLOOR -->
+        <div class="box" id="box2"></div><!-- 2ND FLOOR -->
+        <div class="box" id="box1"></div><!-- 1ST FLOOR -->
 
+    </div>
+    <div class="bxcontainer2">
+        <!-- Add the boxes here -->
+        <div class="box" id="box9"></div><!-- 4TH FLOOR -->
+        <div class="box" id="box8"></div><!-- 3RD FLOOR -->
+        <div class="box" id="box7"></div><!-- 2ND FLOOR -->
+        <div class="box" id="box6"></div><!-- 1ST FLOOR -->
+        
+    </div>
     <script>
-        function filterButtons() {
-            var searchInput = document.getElementById("search").value;
-            var buttons = document.getElementsByClassName("button");
-            
-            for (var i = 0; i < buttons.length; i++) {
-                var button = buttons[i];
-                if (button.id.includes(searchInput)) {
-                    if (button.classList.contains("fade-out")) {
-                        button.classList.remove("fade-out");
-                    }
-                    button.classList.add("fade-in");
-                } else {
-                    if (button.classList.contains("fade-in")) {
-                        button.classList.remove("fade-in");
-                    }
-                    button.classList.add("fade-out");
-                }
-            }
-        }
-
+        // Function to handle button clicks
         function searchButton(buttonNumber) {
-            var searchInput = document.getElementById("search").value;
-            if (searchInput === buttonNumber.toString()) {
-                alert("Matched Button " + buttonNumber);
-            } else {
-                alert("No match found");
+            // Calculate the corresponding box number in the second section
+            var secondBoxNumber = buttonNumber + 5;
+    
+            // Reset the background color of all boxes
+            var boxes = document.querySelectorAll('.box');
+            boxes.forEach(function(box) {
+                box.style.backgroundColor = 'white';
+            });
+    
+            // Reset the background color of all buttons
+            for (var i = 1; i <= 5; i++) {
+                var currentButton = document.getElementById("button" + i);
+                currentButton.style.backgroundColor = ""; // Reset to default (transparent)
+                currentButton.style.display = 'inline-block'; // Show all buttons by default
             }
+    
+            // Change the background color of the clicked button to red
+            var clickedButton = document.getElementById("button" + buttonNumber);
+    
+            // Change the background color of the corresponding boxes to red
+            document.getElementById("box" + buttonNumber).style.backgroundColor = "red";
+            document.getElementById("box" + secondBoxNumber).style.backgroundColor = "red";
+        }
+    
+        // Function to filter buttons based on search input
+        function filterButtons() {
+            // Get the search input value
+            var searchInput = document.getElementById("search").value.toLowerCase();
+    
+            // Reset the display of all buttons
+            var buttons = document.querySelectorAll('.button');
+            buttons.forEach(function(button) {
+                var buttonText = button.textContent.toLowerCase();
+                if (buttonText.includes(searchInput)) {
+                    button.style.display = 'inline-block'; // Show matched buttons
+                } else {
+                    button.style.display = 'none'; // Hide unmatched buttons
+                }
+            });
         }
     </script>
+  
 </body>
 </html>
