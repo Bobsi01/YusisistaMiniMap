@@ -117,33 +117,81 @@ header {
 /* -------------------FLOOR INDICATOR---------------------------*/
 
 /* Responsive styles */
-@media (max-width: 600px) {
+/* Additional CSS for 2400 x 1080 resolution */
+/* Additional adjustments for full responsiveness */
+@media (max-width: 1080px) {
+    /* Header adjustments */
     header {
-        padding: 10px;
-        font-size: 18px;
+        padding: 15px;
+        font-size: 70px;
+        height: 100px;
+    }
+    .search-bar:focus {
+        width: 240px;
+        border-color: #E89C3A;
+        
     }
 
-    .btncontainer {
-        margin-top: 10px;
+    /* Search bar adjustments */
+    .search-bar {
+        width: 190px;
+        height: 100px;
+        margin-bottom: 10px; /* Adjusted margin */
+        transition: width 0.3s ease;
+        border-radius: 5em;
+        border-color: #E89C3A;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfZMqLWMNI7_q0jrqQqOD9fhJqxSdgiwqgJ3nz4Neszw&s");
+        background-size:  60px 60px;
+        background-repeat: no-repeat;
+        background-position: 20px 20px;
+        padding-left: 100px;
+        font-size: 40px;
     }
 
+    /* Button adjustments */
     .button {
         width: 100%;
-        margin-bottom: 10px;
+        max-width: 350px;
+        margin-bottom: 15px;
+        font-size: 30px;
+        padding: 1.2em 2em;
     }
 
-    .search-bar {
-        width: calc(100% - 20px);
-        padding-left: 40px;
+    /* Button container adjustments */
+    .btncontainer {
+        margin-top: 20px;
     }
 
-    .bxcontainer,
-    .bxcontainer2 {
-        bottom: 10px;
+    /* Floor indicator adjustments */
+    .floorindicator,
+    .floorlayout {
+        display: none;
     }
 
-    #box5 {
-        width: calc(100% - 20px);
-        bottom: 100px;
+    /* Additional adjustments for smaller screens */
+    @media (max-width: 600px) {
+        /* Header adjustments */
+        header {
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        /* Search bar adjustments */
+        .search-bar {
+            padding-left: 15px;
+        }
+
+        /* Button adjustments */
+        .button {
+            max-width: none;
+            padding: 1em 2em;
+        }
+
+        /* Button container adjustments */
+        .btncontainer {
+            margin-top: 10px;
+        }
     }
 }
+
+
