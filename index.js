@@ -53,9 +53,14 @@ function showFloorsForBuilding2() {
     document.getElementById('building2').style.display = 'none';
 }
 
-
 // Function to handle back button click
 function goBack() {
+    // Reset background color of all cells
+    var cells = document.querySelectorAll('.floorindicator td');
+    cells.forEach(function(cell) {
+        cell.style.backgroundColor = '';
+    });
+
     // Hide floor buttons for both buildings
     for (let i = 1; i <= 13; i++) {
         document.getElementById('button' + i).style.display = 'none';
@@ -69,11 +74,6 @@ function goBack() {
     document.getElementById('button13').style.display = 'none';
 }
 
-
-
-
-
-
 // Function to handle button clicks and change background color
 function searchButton(building, floor) {
     // Reset background color of all cells
@@ -81,7 +81,7 @@ function searchButton(building, floor) {
     cells.forEach(function(cell) {
         cell.style.backgroundColor = '';
     });
-
+    
     // Set background color based on floor and building
     if (building === 1) {
         if (floor === 1) {
