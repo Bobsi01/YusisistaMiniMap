@@ -1,19 +1,3 @@
-// Function to filter buttons based on search input
-function filterButtons() {
-    // Get the search input value
-    var searchInput = document.getElementById("search").value.toLowerCase();
-
-    // Reset the display of all buttons
-    var buttons = document.querySelectorAll('.button');
-    buttons.forEach(function(button) {
-        var buttonText = button.textContent.toLowerCase();
-        if (buttonText.includes(searchInput)) {
-            button.style.display = 'inline-block'; // Show matched buttons
-        } else {
-            button.style.display = 'none'; // Hide unmatched buttons
-        }
-    });
-}
 
 // Function to handle button clicks and show floor buttons for building 1
 function showFloorsForBuilding1() {
@@ -85,27 +69,27 @@ function searchButton(building, floor) {
     // Set background color based on floor and building
     if (building === 1) {
         if (floor === 1) {
-            document.getElementById('floor11').style.backgroundColor = 'red';
+            document.getElementById('floor11').style.backgroundColor = '#e89d3a';
         } else if (floor === 2) {
-            document.getElementById('floor21').style.backgroundColor = 'red';
+            document.getElementById('floor21').style.backgroundColor = '#e89d3a';
         } else if (floor === 3) {
-            document.getElementById('floor31').style.backgroundColor = 'red';
+            document.getElementById('floor31').style.backgroundColor = '#e89d3a';
         } else if (floor === 4) {
-            document.getElementById('floor41').style.backgroundColor = 'red';
+            document.getElementById('floor41').style.backgroundColor = '#e89d3a';
         } else if (floor === 5) {
-            document.getElementById('social').style.backgroundColor = 'red';
+            document.getElementById('social').style.backgroundColor = '#e89d3a';
         }
     } else if (building === 2) {
         if (floor === 1) {
-            document.getElementById('floor12').style.backgroundColor = 'red';
+            document.getElementById('floor12').style.backgroundColor = '#e89d3a';
         } else if (floor === 2) {
-            document.getElementById('floor22').style.backgroundColor = 'red';
+            document.getElementById('floor22').style.backgroundColor = '#e89d3a';
         } else if (floor === 3) {
-            document.getElementById('floor32').style.backgroundColor = 'red';
+            document.getElementById('floor32').style.backgroundColor = '#e89d3a';
         } else if (floor === 4) {
-            document.getElementById('floor42').style.backgroundColor = 'red';
+            document.getElementById('floor42').style.backgroundColor = '#e89d3a';
         } else if (floor === 5) {
-            document.getElementById('social').style.backgroundColor = 'red';
+            document.getElementById('social').style.backgroundColor = '#e89d3a';
         }
     }
 }

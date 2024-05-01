@@ -8,11 +8,19 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="row">
+    <div class="rowalign">
+
+           <div class="trybox">
+                <h1>1</h1>
+           </div>
+           <div class="trybox2">
+                <h1>2</h1>
+           </div>
+
+           <div class="buttonandfloor">
         <div class="btncontainer">
-            <!-- Input field for search (removed oninput attribute) -->
-            <input type="text" id="search" class="search-bar" placeholder="Search..." oninput="filterButtons()">
             
+            <h2>North Campus</h2>
             <!-- Default buttons for buildings -->
             <button class="button building-button" id="building1" onclick="showFloorsForBuilding1()">Building 1</button>
             
@@ -20,37 +28,27 @@
             
             <!-- Floor buttons for Building 1 -->
             <button class="button" id="button1" style="display: none;" onclick="searchButton(1, 5)">5th floor</button>
-            
             <button class="button" id="button2" style="display: none;" onclick="searchButton(1, 4)">4th floor</button>
-            
             <button class="button" id="button3" style="display: none;" onclick="searchButton(1, 3)">3rd floor</button>
-            
             <button class="button" id="button4" style="display: none;" onclick="searchButton(1, 2)">2nd floor</button>
-            
             <button class="button" id="button5" style="display: none;" onclick="searchButton(1, 1)">1st floor</button>
-            
             <!-- Floor buttons for Building 2 -->
             <button class="button" id="button6" style="display: none;" onclick="searchButton(2, 5)">5th floor</button>
-            
             <button class="button" id="button7" style="display: none;" onclick="searchButton(2, 4)">4th floor</button>
-            
             <button class="button" id="button8" style="display: none;" onclick="searchButton(2, 3)">3rd floor</button>
-            
             <button class="button" id="button9" style="display: none;" onclick="searchButton(2, 2)">2nd floor</button>
-            
             <button class="button" id="button10" style="display: none;" onclick="searchButton(2, 1)">1st floor</button>
-            
             <!-- Back button -->
             <button class="button" id="button11" style="display: none;" onclick="goBack()">Building 1</button>
-            
             <button class="button" id="button12" style="display: none;" onclick="goBack()">Building 2</button>
-            
             <!-- Back button -->
             <button class="button" id="button13" style="display: none;" onclick="goBack()">Back</button>
-        </div>
+
+            
+        </div> <!-- end of class row -->
         <table class="floorindicator">
             <tr>
-                <td class="floorlayout" colspan="2" id="social">Spanning column</td>
+                <td class="floorlayout" colspan="2" id="social">Social Hall</td>
             </tr>
             <tr>
                 <td class="floorlayout" id="floor41">4-1</td>
@@ -69,6 +67,9 @@
                 <td class="floorlayout" id="floor12">1-2</td>
             </tr>
         </table>
+    </div>
+
+       
     </div>
 </body>
 </html>
