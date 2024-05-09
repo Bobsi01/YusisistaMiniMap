@@ -1,12 +1,31 @@
-const button = document.getElementById("getStartedButton");
-const desc = document.querySelector(".description");
+const getStartedButton = document.getElementById("getStartedButton");
+const description = document.querySelector(".description");
+const homeButton = document.getElementById("homeButton");
+const about = document.querySelector(".about");
+const homeBut = document.querySelector(".homebut");
+const slide = document.querySelector(".slide");
 
-button.addEventListener("click", function() {
-  desc.classList.add("hide-description"); // Add class to hide description
-  button.classList.add("hide-button"); // Add class to hide button
+getStartedButton.addEventListener("click", function() {
+  description.classList.add("hide-description");
+  getStartedButton.classList.add("hide-button");
   setTimeout(function() {
-    document.querySelector(".about").classList.add("show-about"); // Add class to show 'about' section after transition ends
-    desc.style.display = "none";
-    button.style.display = "none";
-  }, 2000); // Adjust this time to match the duration of the transition in CSS
+    about.classList.add("show-about");
+    homeBut.classList.add("show-homebut");
+    slide.classList.add("show-slide");
+    description.style.display = "none";
+    getStartedButton.style.display = "none";
+  }, 2000);
 });
+
+homeButton.addEventListener("click", function() {
+  about.classList.remove("show-about");
+  homeBut.classList.add("hide-homebut");
+  slide.classList.remove("show-slide");
+  description.classList.remove("hide-description");
+  getStartedButton.classList.remove("hide-button");
+  setTimeout(function() {
+    description.style.display = "block";
+    getStartedButton.style.display = "block";
+  }, 2000);
+});
+
