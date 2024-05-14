@@ -9,7 +9,19 @@ header {
   position: fixed; 
   top: 0; 
   left: 0; 
-  z-index: 1000; 
+ z-index: 1000;
+}
+
+.logo-container {
+  position: fixed;
+  top: 0px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 1001; /* Ensure it's above the header */
+}
+
+.logo {
+  width: 65px;
+  height: 65px;
 }
 
 /* Background styles */
