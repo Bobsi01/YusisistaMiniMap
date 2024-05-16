@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
         homeBut.style.transform = "translateY(0)";
         setTimeout(enableScrolling, 2000); // Enable scrolling after the animation completes
       }, 100); // Slight delay to ensure display change takes effect before starting animations
-    }, 1000); // Wait for the first page to slide up
+    }, 750); // Wait for the first page to slide up
   });
 
   homeButton.addEventListener("click", function() {

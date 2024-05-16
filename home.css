@@ -160,6 +160,8 @@ header {
 
   transform: translateY(-100vh);
 
+  z-index: 1000;
+
 }
 
 .no-scroll {
