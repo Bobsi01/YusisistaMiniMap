@@ -15,8 +15,21 @@ document.addEventListener("DOMContentLoaded", function() {
   secondPage.style.display = "none";
   about.style.transition = "transform 2s ease-in-out, opacity 2s ease-in-out";
   homeBut.style.transition = "transform 2s ease-in-out, opacity 2s ease-in-out";
+  about.style.transform = "translateY(100vh)"; // Start below the viewport
+  homeBut.style.transform = "translateY(100vh)"; // Start below the viewport
+
+  function disableScrolling() {
+    document.body.classList.add('no-scroll');
+  }
+
+  function enableScrolling() {
+    document.body.classList.remove('no-scroll');
+  }
 
   getStartedButton.addEventListener("click", function() {
+    // Disable scrolling
+    disableScrolling();
+
     // Slide up elements on the first page
     bgRed.style.transition = "transform 2s ease-in-out";
     description.style.transition = "transform 2s ease-in-out";
@@ -30,34 +43,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
     setTimeout(function() {
       // Show the second page smoothly
-      secondPage.style.display = "block";
-      bgBlue.style.opacity = 1;
-      about.style.opacity = 1;
-      homeBut.style.opacity = 1;
-      about.style.transform = "translateY(0)"; // Slide up to the center
-      homeBut.style.transform = "translateY(0)"; // Slide up to the center
-    
-    }, 1000); // Adjust the timing accordingly
-
-    // Slide up animation for the second page elements
-    about.style.transform = "translateY(100%)";
-    homeBut.style.transform = "translateY(100%)";
-    about.style.opacity = 0;
-    homeBut.style.opacity = 0;
-    setTimeout(function() {
-      about.style.transition = "transform 2s ease-in-out, opacity 2s ease-in-out";
-      homeBut.style.transition = "transform 2s ease-in-out, opacity 2s ease-in-out";
-      about.style.transform = "translateY(0)";
-      homeBut.style.transform = "translateY(0)";
-      about.style.opacity = 1;
-      homeBut.style.opacity = 1;
-    }, 1200); // Adjust the timing accordingly
+      secondPage.style.display = "flex";
+      setTimeout(function() {
+        bgBlue.style.opacity = 1;
+        about.style.opacity = 1;
+        homeBut.style.opacity = 1;
+        about.style.transform = "translateY(0)";
+        homeBut.style.transform = "translateY(0)";
+        setTimeout(enableScrolling, 2000); // Enable scrolling after the animation completes
+      }, 100); // Slight delay to ensure display change takes effect before starting animations
+    }, 1000); // Wait for the first page to slide up
   });
 
   homeButton.addEventListener("click", function() {
+    // Disable scrolling
+    disableScrolling();
+
     // Slide down elements on the second page
-    about.style.transform = "translateY(200vh)";
-    homeBut.style.transform = "translateY(200vh)";
+    about.style.transform = "translateY(100vh)";
+    homeBut.style.transform = "translateY(100vh)";
     about.style.opacity = 0;
     homeBut.style.opacity = 0;
 
@@ -73,9 +77,11 @@ document.addEventListener("DOMContentLoaded", function() {
       getStartedButton.style.transform = "translateY(0)";
       slide.style.transform = "translateY(0)";
 
-      // Hide the second page after sliding down
-      secondPage.style.display = "none";
-      bgBlue.style.opacity = 0;
-    }, 900); // Wait for the second page elements to slide down before showing the first page
+      setTimeout(function() {
+        secondPage.style.display = "none";
+        bgBlue.style.opacity = 0;
+        enableScrolling(); // Enable scrolling after the second page hides
+      }, 1500); // Wait for the second page elements to slide down before hiding the second page
+    }, 1000); // Adjust the timing accordingly
   });
 });

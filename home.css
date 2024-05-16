@@ -2,8 +2,16 @@
 header {
   background: linear-gradient(to bottom, #e89d3a, #00732cbd);
   padding: 20px;
-  color: white;
-  font-size: 24px;
+  font-family: 'Roboto Slab';
+  font-size: 25px;
+  letter-spacing: 0px;
+  word-spacing: 4.4px;
+  color: #f0f8ff;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
   width: 100%; 
   box-sizing: border-box; 
   position: fixed; 
@@ -40,15 +48,23 @@ header {
 .description {
   position: relative;
   margin: 100px auto 30px;
-  width: 500px;
+  width: 750px;
   height: 225px;
   border-radius: 30px;
   padding: 75px 15px;
 
-  background: linear-gradient(to bottom, #e89d3a, #00732cbd);
+  background: linear-gradient(to bottom, #01732d, #FC934F);
 
-  color: rgb(255, 255, 255);
-  font-size: 25px;
+  font-family: 'Roboto Slab';
+      font-size: 25px;
+  letter-spacing: 0px;
+  word-spacing: 4.4px;
+  color: aliceblue;
+  font-weight: normal;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: italic;
+  font-variant: small-caps;
+  text-transform: none;
   
   text-align: justify;
   line-height: 45px;
@@ -60,11 +76,21 @@ header {
   width: 150px;
   height: 100px;
   border-radius: 30px;
-  background: linear-gradient(to bottom, #e89d3a, #00732cbd);
+  background: linear-gradient(145deg, #01732d,#FC934F);
   
-  color: aliceblue;
+  font-family: 'Roboto';  
   font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0px;
+  word-spacing: 4.4px;
+  color: #f0f8ff;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+
+  font-variant: small-caps;
+  text-transform: none;
   text-align: center;
   line-height: 25px;
 }
@@ -77,6 +103,7 @@ header {
   height: 100%;
   background-color: white;
   transform: secPage 2s ease-in-out;
+  /*transform: translateY(-1000vh);*/
 }
 
 
@@ -90,12 +117,22 @@ header {
   height: 225px;
   border-radius: 30px;
   padding: 75px 25px;
-  background: linear-gradient(to bottom, #e89d3a, #00732cbd);
-  color: rgb(255, 255, 255);
-  font-size: 27px;
+  background: linear-gradient(to bottom, #01732d, #FC934F);
+  font-family: 'Roboto';
+    font-size: 25px;
+  letter-spacing: 0px;
+  word-spacing: 4.4px;
+  color: aliceblue;
+  font-weight: normal;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: italic;
+  font-variant: small-caps;
+  text-transform: none;
   text-align: justify;
   line-height: 35px;
   transition: all 2s ease-in-out;
+
+  transform: translateY(-100vh);
 }
 
 .homebut {
@@ -107,10 +144,25 @@ header {
   width: 130px;
   height: 50px;
   border-radius: 30px;
-  background: linear-gradient(to bottom, #e89d3a, #00732cbd);
-  color: aliceblue;
+  background: linear-gradient(145deg, #01732d,#FC934F); 
+  font-family: 'Roboto';  
   font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0px;
+  word-spacing: 4.4px;
+  color: #f0f8ff;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
   text-align: center;
   line-height: 10px;
+
+  transform: translateY(-100vh);
+
 }
+
+.no-scroll {
+  overflow: hidden;
+}
+
