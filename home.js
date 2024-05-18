@@ -89,6 +89,6 @@ document.addEventListener("DOMContentLoaded", function() {
         secondPage.style.display = "none";
         enableScrolling(); // Enable scrolling after the second page hides
       }, 1500); // Wait for the second page elements to slide down before hiding the second page
-    }, 1000); // Wait for the background to fade out
+    }, 500); // Wait for the background to fade out
   });
 });

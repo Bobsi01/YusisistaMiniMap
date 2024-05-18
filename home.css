@@ -1,8 +1,11 @@
 /* Yusisi logo */
 .yusisi {
   float: left;
-  margin-left: 175px;
-  margin-top: 100px;
+  
+  margin-top: 10vh;
+  margin-left: 25vh;
+  z-index: 1000;
+
 }
 
 /* Styles for header */
@@ -61,25 +64,24 @@ header {
   width: 750px;
   height: 225px;
   border-radius: 30px;
-  padding: 75px 15px;
+  padding: 40px; /* Adjusted padding for better content placement */
   background: linear-gradient(to bottom, #01732d, #FC934F);
-  font-family: 'Roboto Slab';
-  font-size: 25px;
-  letter-spacing: 0px;
-  word-spacing: 4.4px;
-  color: aliceblue;
-  font-weight: normal;
-  text-decoration: none solid rgb(68, 68, 68);
+  font-family: 'Roboto Slab', serif; /* Changed font-family to serif for a more classic feel */
+  font-size: 22px; /* Slightly reduced font size for better readability */
+  letter-spacing: 0.5px; /* Added slight letter spacing for clarity */
+  word-spacing: 2px; /* Reduced word spacing for better readability */
+  color: #f0f8ff; /* Changed text color to off-white for better contrast */
+  font-weight: 400; /* Changed font-weight to normal for better readability */
+  text-decoration: none;
   font-style: italic;
-  font-variant: small-caps;
   text-transform: none;
   text-align: justify;
-  line-height: 45px;
+  line-height: 1.6; /* Adjusted line height for better spacing */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added a subtle shadow for depth */
 }
 
-.description:hover {
-  transform: 2s scale(1.1);
-}
+
+
 
 .slide {
   position: relative;
@@ -87,22 +89,23 @@ header {
   width: 150px;
   height: 100px;
   border-radius: 30px;
-  background: linear-gradient(145deg, #01732d,#FC934F);
-  font-family: 'Roboto';  
+  background: linear-gradient(145deg, #01732d, #FC934F);
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
-  letter-spacing: 0px;
-  word-spacing: 4.4px;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
   color: #f0f8ff;
   font-weight: 400;
-  text-decoration: none solid rgb(68, 68, 68);
+  text-decoration: none;
   font-style: normal;
-  font-variant: normal;
-  text-transform: none;
-  font-variant: small-caps;
   text-transform: none;
   text-align: center;
-  line-height: 25px;
+  line-height: 1.5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.3s ease; /* Add smooth transition effect */
 }
+
+
 
 /* Styles for the second page */
 .second-page {
@@ -115,36 +118,37 @@ header {
 }
 
 .about {
-  opacity: 0;
-  position: absolute;
-  top: -500px;
-  left: 500px;
+  opacity: 1;
+  position: fixed; /* Changed position to fixed */
+  top: 250px; /* Centering vertically */
+  left: 500px; /* Centering horizontally */
   transform: translate(-50%, -50%);
   width: 500px;
-  height: 225px;
+  max-width: 90%;
+  height: auto;
   border-radius: 30px;
-  padding: 75px 25px;
+  padding: 40px;
   background: linear-gradient(to bottom, #01732d, #FC934F);
-  font-family: 'Roboto';
-  font-size: 25px;
-  letter-spacing: 0px;
-  word-spacing: 4.4px;
-  color: aliceblue;
-  font-weight: normal;
-  text-decoration: none solid rgb(68, 68, 68);
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+  color: #f0f8ff;
+  font-weight: 400;
+  text-decoration: none;
   font-style: italic;
-  font-variant: small-caps;
   text-transform: none;
   text-align: justify;
-  line-height: 35px;
-  transition: all 2s ease-in-out;
-  transform: translateY(-100vh);
+  line-height: 1.6;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translate(-50%, -50%) translateY(0);
 }
+
 
 .homebut {
   opacity: 0;
   position: absolute;
-  bottom: -60px;
+  bottom: -130px;
   left: 1375px;
   transform: translateX(-50%);
   width: 130px;
@@ -165,8 +169,29 @@ header {
   line-height: 10px;
   transform: translateY(-80vh);
   z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.3s ease; /* Add smooth transition effect */
 }
+
 
 .no-scroll {
   overflow: hidden;
+}
+
+
+
+.slide,
+.homebut {
+  /* Other button styles */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Added smooth transition effect */
+}
+
+.slide:hover,
+.homebut:hover {
+  transform: translateY(-30px); /* Add a slight lift on hover */
+}
+
+.slide:hover,
+.homebut:active {
+  transform: translateY(15px); /* Add a slight press effect when clicked */
 }
