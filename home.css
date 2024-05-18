@@ -1,6 +1,13 @@
+/* Yusisi logo */
+.yusisi {
+  float: left;
+  margin-left: 175px;
+  margin-top: 100px;
+}
+
 /* Styles for header */
 header {
-  background: linear-gradient(to bottom, #e89d3a, #00732cbd);
+  background-image: url(header.png);
   padding: 20px;
   font-family: 'Roboto Slab';
   font-size: 25px;
@@ -17,18 +24,21 @@ header {
   position: fixed; 
   top: 0; 
   left: 0; 
- z-index: 1000;
+  z-index: 1000;
 }
 
 .logo-container {
   position: fixed;
-  top: 0px; /* Adjust as needed */
+  top: 1px; /* Adjust as needed */
   right: 20px; /* Adjust as needed */
   z-index: 1001; /* Ensure it's above the header */
+  transition: transform 2s ease-in-out;
+  width: 65px;
+  height: 65px;
 }
 
 .logo {
-  width: 65px;
+  width: 75px;
   height: 65px;
 }
 
@@ -40,23 +50,21 @@ header {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background-color: white; /* Set background color to white */
+  background-image: url(slidebg.png);
   transition: opacity 2s ease-in-out;
 }
 
 /* Description box style */
 .description {
   position: relative;
-  margin: 100px auto 30px;
+  margin: 120px 650px 30px;
   width: 750px;
   height: 225px;
   border-radius: 30px;
   padding: 75px 15px;
-
   background: linear-gradient(to bottom, #01732d, #FC934F);
-
   font-family: 'Roboto Slab';
-      font-size: 25px;
+  font-size: 25px;
   letter-spacing: 0px;
   word-spacing: 4.4px;
   color: aliceblue;
@@ -65,19 +73,21 @@ header {
   font-style: italic;
   font-variant: small-caps;
   text-transform: none;
-  
   text-align: justify;
   line-height: 45px;
 }
 
+.description:hover {
+  transform: 2s scale(1.1);
+}
+
 .slide {
   position: relative;
-  margin-left: 100vh;
+  margin-left: 140vh;
   width: 150px;
   height: 100px;
   border-radius: 30px;
   background: linear-gradient(145deg, #01732d,#FC934F);
-  
   font-family: 'Roboto';  
   font-size: 20px;
   letter-spacing: 0px;
@@ -88,7 +98,6 @@ header {
   font-style: normal;
   font-variant: normal;
   text-transform: none;
-
   font-variant: small-caps;
   text-transform: none;
   text-align: center;
@@ -103,9 +112,7 @@ header {
   height: 100%;
   background-color: white;
   transform: secPage 2s ease-in-out;
-  /*transform: translateY(-1000vh);*/
 }
-
 
 .about {
   opacity: 0;
@@ -119,7 +126,7 @@ header {
   padding: 75px 25px;
   background: linear-gradient(to bottom, #01732d, #FC934F);
   font-family: 'Roboto';
-    font-size: 25px;
+  font-size: 25px;
   letter-spacing: 0px;
   word-spacing: 4.4px;
   color: aliceblue;
@@ -131,14 +138,13 @@ header {
   text-align: justify;
   line-height: 35px;
   transition: all 2s ease-in-out;
-
   transform: translateY(-100vh);
 }
 
 .homebut {
   opacity: 0;
   position: absolute;
-  bottom: -80px;
+  bottom: -60px;
   left: 1375px;
   transform: translateX(-50%);
   width: 130px;
@@ -157,14 +163,10 @@ header {
   text-transform: none;
   text-align: center;
   line-height: 10px;
-
-  transform: translateY(-100vh);
-
+  transform: translateY(-80vh);
   z-index: 1000;
-
 }
 
 .no-scroll {
   overflow: hidden;
 }
-

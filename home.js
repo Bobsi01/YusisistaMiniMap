@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const homeBut = document.querySelector(".homebut");
   const slide = document.querySelector(".slide");
   const secondPage = document.querySelector(".second-page");
+  const yusisi = document.querySelector(".yusisi");
 
   // Initially hide the second page elements
   bgBlue.style.opacity = 0;
@@ -35,11 +36,13 @@ document.addEventListener("DOMContentLoaded", function() {
     description.style.transition = "transform 2s ease-in-out";
     getStartedButton.style.transition = "transform 2s ease-in-out";
     slide.style.transition = "transform 2s ease-in-out";
+    yusisi.style.transition = "transform 2s ease-in-out";
 
     bgRed.style.transform = "translateY(-100vh)";
     description.style.transform = "translateY(-100vh)";
     getStartedButton.style.transform = "translateY(-100vh)";
     slide.style.transform = "translateY(-100vh)";
+    yusisi.style.transform = "translateY(-100vh)";
 
     setTimeout(function() {
       // Show the second page smoothly
@@ -59,6 +62,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // Disable scrolling
     disableScrolling();
 
+    // Fade out the background of the second page
+    bgBlue.style.opacity = 0;
+
     // Slide down elements on the second page
     about.style.transform = "translateY(100vh)";
     homeBut.style.transform = "translateY(100vh)";
@@ -66,22 +72,23 @@ document.addEventListener("DOMContentLoaded", function() {
     homeBut.style.opacity = 0;
 
     setTimeout(function() {
-      // Show the first page sliding down
+      // Slide down elements on the first page
       bgRed.style.transition = "transform 2s ease-in-out";
       description.style.transition = "transform 2s ease-in-out";
       getStartedButton.style.transition = "transform 2s ease-in-out";
       slide.style.transition = "transform 2s ease-in-out";
+      yusisi.style.transition = "transform 2s ease-in-out";
 
       bgRed.style.transform = "translateY(0)";
       description.style.transform = "translateY(0)";
       getStartedButton.style.transform = "translateY(0)";
       slide.style.transform = "translateY(0)";
+      yusisi.style.transform = "translateY(0)";
 
       setTimeout(function() {
         secondPage.style.display = "none";
-        bgBlue.style.opacity = 0;
         enableScrolling(); // Enable scrolling after the second page hides
       }, 1500); // Wait for the second page elements to slide down before hiding the second page
-    }, 1000); // Adjust the timing accordingly
+    }, 1000); // Wait for the background to fade out
   });
 });
