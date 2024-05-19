@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const bgRed = document.querySelector(".bg1 img");
-  const bgBlue = document.querySelector(".bg2 img");
+  const bgRed = document.querySelector(".bg1");
+  const bgBlue = document.querySelector(".bg2");
 
   const getStartedButton = document.getElementById("getStartedButton");
   const description = document.querySelector(".description");
@@ -8,64 +8,87 @@ document.addEventListener("DOMContentLoaded", function() {
   const about = document.querySelector(".about");
   const homeBut = document.querySelector(".homebut");
   const slide = document.querySelector(".slide");
+  const secondPage = document.querySelector(".second-page");
+  const yusisi = document.querySelector(".yusisi");
 
   // Initially hide the second page elements
-  bgBlue.style.display = "none";
-  about.style.display = "none";
-  homeBut.style.display = "none";
+  bgBlue.style.opacity = 0;
+  secondPage.style.display = "none";
+  about.style.transition = "transform 2s ease-in-out, opacity 2s ease-in-out";
+  homeBut.style.transition = "transform 2s ease-in-out, opacity 2s ease-in-out";
+  about.style.transform = "translateY(100vh)"; // Start below the viewport
+  homeBut.style.transform = "translateY(100vh)"; // Start below the viewport
 
-  // Initially show the red background image
-  bgRed.style.opacity = 1;
+  function disableScrolling() {
+    document.body.classList.add('no-scroll');
+  }
+
+  function enableScrolling() {
+    document.body.classList.remove('no-scroll');
+  }
 
   getStartedButton.addEventListener("click", function() {
+    // Disable scrolling
+    disableScrolling();
+
     // Slide up elements on the first page
     bgRed.style.transition = "transform 2s ease-in-out";
     description.style.transition = "transform 2s ease-in-out";
     getStartedButton.style.transition = "transform 2s ease-in-out";
     slide.style.transition = "transform 2s ease-in-out";
+    yusisi.style.transition = "transform 2s ease-in-out";
 
     bgRed.style.transform = "translateY(-100vh)";
     description.style.transform = "translateY(-100vh)";
     getStartedButton.style.transform = "translateY(-100vh)";
     slide.style.transform = "translateY(-100vh)";
+    yusisi.style.transform = "translateY(-100vh)";
 
     setTimeout(function() {
       // Show the second page smoothly
-      bgBlue.style.display = "block";
-      about.style.display = "block";
-      homeBut.style.display = "block";
-
-      bgBlue.style.transition = "transform 2s ease-in-out";
-      about.style.transition = "transform 2s ease-in-out";
-      homeBut.style.transition = "transform 2s ease-in-out";
-
-      bgBlue.style.transform = "translateY(0)";
-      about.style.transform = "translateY(0)";
-      homeBut.style.transform = "translateY(0)";
-    }, 1); // Wait for the first page elements to slide up before showing the second page
+      secondPage.style.display = "flex";
+      setTimeout(function() {
+        bgBlue.style.opacity = 1;
+        about.style.opacity = 1;
+        homeBut.style.opacity = 1;
+        about.style.transform = "translateY(0)";
+        homeBut.style.transform = "translateY(0)";
+        setTimeout(enableScrolling, 2000); // Enable scrolling after the animation completes
+      }, 100); // Slight delay to ensure display change takes effect before starting animations
+    }, 750); // Wait for the first page to slide up
   });
 
   homeButton.addEventListener("click", function() {
-    // Slide down elements on the second page
-    bgBlue.style.transition = "transform 2s ease-in-out";
-    about.style.transition = "transform 2s ease-in-out";
-    homeBut.style.transition = "transform 2s ease-in-out";
+    // Disable scrolling
+    disableScrolling();
 
-    bgBlue.style.transform = "translateY(100vh)";
+    // Fade out the background of the second page
+    bgBlue.style.opacity = 0;
+
+    // Slide down elements on the second page
     about.style.transform = "translateY(100vh)";
     homeBut.style.transform = "translateY(100vh)";
+    about.style.opacity = 0;
+    homeBut.style.opacity = 0;
 
     setTimeout(function() {
-      // Show the first page sliding down
+      // Slide down elements on the first page
       bgRed.style.transition = "transform 2s ease-in-out";
       description.style.transition = "transform 2s ease-in-out";
       getStartedButton.style.transition = "transform 2s ease-in-out";
       slide.style.transition = "transform 2s ease-in-out";
+      yusisi.style.transition = "transform 2s ease-in-out";
 
       bgRed.style.transform = "translateY(0)";
       description.style.transform = "translateY(0)";
       getStartedButton.style.transform = "translateY(0)";
       slide.style.transform = "translateY(0)";
-    }, 2000); // Wait for the second page elements to slide down before showing the first page
+      yusisi.style.transform = "translateY(0)";
+
+      setTimeout(function() {
+        secondPage.style.display = "none";
+        enableScrolling(); // Enable scrolling after the second page hides
+      }, 1500); // Wait for the second page elements to slide down before hiding the second page
+    }, 500); // Wait for the background to fade out
   });
 });

@@ -1,3 +1,51 @@
+/* Yusisi logo */
+.yusisi {
+  float: left;
+  
+  margin-top: 10vh;
+  margin-left: 25vh;
+  z-index: 1000;
+
+}
+
+/* Styles for header */
+header {
+  background-image: url(header.png);
+  padding: 20px;
+  font-family: 'Roboto Slab';
+  font-size: 25px;
+  letter-spacing: 0px;
+  word-spacing: 4.4px;
+  color: #f0f8ff;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  width: 100%; 
+  box-sizing: border-box; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  z-index: 1000;
+}
+
+.logo-container {
+  position: fixed;
+  top: 1px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 1001; /* Ensure it's above the header */
+  transition: transform 2s ease-in-out;
+  width: 65px;
+  height: 65px;
+}
+
+.logo {
+  width: 75px;
+  height: 65px;
+}
+
+/* Background styles */
 .bg1, .bg2 {
   position: fixed;
   top: 0;
@@ -5,205 +53,145 @@
   width: 100vw;
   height: 100vh;
   z-index: -1;
+  background-image: url(slidebg.png);
   transition: opacity 2s ease-in-out;
 }
 
-.bg1 img, .bg2 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
+/* Description box style */
+.description {
+  position: relative;
+  margin: 120px 650px 30px;
+  width: 750px;
+  height: 225px;
+  border-radius: 30px;
+  padding: 40px; /* Adjusted padding for better content placement */
+  background: linear-gradient(to bottom, #01732d, #FC934F);
+  font-family: 'Roboto Slab', serif; /* Changed font-family to serif for a more classic feel */
+  font-size: 22px; /* Slightly reduced font size for better readability */
+  letter-spacing: 0.5px; /* Added slight letter spacing for clarity */
+  word-spacing: 2px; /* Reduced word spacing for better readability */
+  color: #f0f8ff; /* Changed text color to off-white for better contrast */
+  font-weight: 400; /* Changed font-weight to normal for better readability */
+  text-decoration: none;
+  font-style: italic;
+  text-transform: none;
+  text-align: justify;
+  line-height: 1.6; /* Adjusted line height for better spacing */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added a subtle shadow for depth */
 }
 
-  .description {
 
-    position: relative;
-    margin: 100px auto 50px;
-    /* shorthand for margin */
-    width: 500px;
-    height: 225px;
-    border-radius: 30px;
-    padding: 75px 25px;
-    /* shorthand for padding */
-    background: linear-gradient(
-      90deg,
-      rgba(10, 135, 0, 1) 0%,
-      rgba(217, 98, 0, 1) 45%,
-      rgba(25, 179, 0, 1) 92%
-    );
-    color: aliceblue;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
-    line-height: 25px;
-    /* Transition for description opacity */
-  }
-  
-  .hide-description {
-    animation: myAnim 2s ease-in-out 1s 1 normal forwards;
-  }
-  
-  @keyframes myAnim {
-    0% {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-    95% {
-      transform: translateY(-190vh);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-200vh);
-      opacity: 0;
-    }
-  }
 
-  .show-description {
-    animation: myAnim4 2s ease-in-out 0s 1 normal both;
-  }
-  
-  @keyframes myAnim4 {
-    0% {
-      opacity: 0;
-      transform: translateY(-50%);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: translateY(10%);
-    }
-  }
-  
-  .slide {
-    position: relative;
-    margin-left: 100vh;
-    /* shorthand for margin */
-    width: 150px;
-    height: 100px;
-    border-radius: 30px;
-    background: linear-gradient(
-      90deg,
-      rgba(10, 135, 0, 1) 0%,
-      rgba(217, 98, 0, 1) 45%,
-      rgba(25, 179, 0, 1) 92%
-    );
-    color: aliceblue;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    line-height: 25px;
-    /* Add your button styling here */
-  }
-  
-  .hide-button {
-    animation: myAnim 2s ease-in-out 1s 1 normal forwards;
-  }
-  
-  .about {
-    opacity: 0;
-    position: fixed;
-    top: 45%;
-    left: 33.3%;
-    transform: translate(50%, 200vh);
-    margin: 0 auto;
-    width: 500px;
-    height: 225px;
-    border-radius: 30px;
-    padding: 75px 25px;
-    /* shorthand for padding */
-    background: linear-gradient(
-      90deg,
-      rgba(10, 135, 0, 1) 0%,
-      rgba(217, 98, 0, 1) 45%,
-      rgba(25, 179, 0, 1) 92%
-    );
-    color: aliceblue;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
-    line-height: 25px;
-    transition: all 2s ease-in-out;
-  }
-  
-  
-  .show-about {
-    animation: myAnim1 2s ease-in-out 0s 1 normal both;  }
 
-    @keyframes myAnim1 {
-        0% {
-            opacity: 0;
-            transform: translateY(50%);
-        }
-    
-        100% {
-            opacity: 1;
-            transform: translateY(-50%);
-        }
-    }
-    
+.slide {
+  position: relative;
+  margin-left: 140vh;
+  width: 150px;
+  height: 100px;
+  border-radius: 30px;
+  background: linear-gradient(145deg, #01732d, #FC934F);
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+  color: #f0f8ff;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: normal;
+  text-transform: none;
+  text-align: center;
+  line-height: 1.5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.3s ease; /* Add smooth transition effect */
+}
 
-    .homebut {
-      opacity: 0;
-      position: fixed;
-      margin-top: 85vh;
-      margin-left: 46%;
-      /* shorthand for margin */
-      width: 150px;
-      height: 100px;
-      border-radius: 30px;
-      background: linear-gradient(
-        90deg,
-        rgba(10, 135, 0, 1) 0%,
-        rgba(217, 98, 0, 1) 45%,
-        rgba(25, 179, 0, 1) 92%
-      );
-      color: aliceblue;
-      font-size: 20px;
-      font-family: Arial, Helvetica, sans-serif;
-      text-align: center;
-      line-height: 25px;
-      /* Add your button styling here */
-    }
 
-    .show-homebut {
-      animation: myAnim2 2s ease-in-out 0s 1 normal both;  }
-  
-      @keyframes myAnim2 {
-          0% {
-              opacity: 0;
-              transform: translateY(50%);
-          }
 
-          50% {
-            opacity: 0;
-            transform: translateY(0%);
-        }
-      
-          100% {
-              opacity: 1;
-              transform: translateY(-50%);
-          }
-      }
+/* Styles for the second page */
+.second-page {
+  display: none; /* Initially hidden */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transform: secPage 2s ease-in-out;
+}
 
-      .show-slide {
-        animation: myAnim3 2s ease-in-out 0s 1 normal both;  }
-    
-        @keyframes myAnim3 {
-            0% {
-                opacity: 0;
-                transform: translateY(-50%);
-            }
-  
-            50% {
-              opacity: 0;
-              transform: translateY(0%);
-          }
-        
-            100% {
-                opacity: 1;
-                transform: translateY(50%);
-            }
-        }
-     
-       
-        
+.about {
+  opacity: 1;
+  position: fixed; /* Changed position to fixed */
+  top: 250px; /* Centering vertically */
+  left: 500px; /* Centering horizontally */
+  transform: translate(-50%, -50%);
+  width: 500px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 30px;
+  padding: 40px;
+  background: linear-gradient(to bottom, #01732d, #FC934F);
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+  color: #f0f8ff;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: italic;
+  text-transform: none;
+  text-align: justify;
+  line-height: 1.6;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translate(-50%, -50%) translateY(0);
+}
+
+
+.homebut {
+  opacity: 0;
+  position: absolute;
+  bottom: -130px;
+  left: 1375px;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 50px;
+  border-radius: 30px;
+  background: linear-gradient(145deg, #01732d,#FC934F); 
+  font-family: 'Roboto';  
+  font-size: 20px;
+  letter-spacing: 0px;
+  word-spacing: 4.4px;
+  color: #f0f8ff;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-align: center;
+  line-height: 10px;
+  transform: translateY(-80vh);
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+
+.no-scroll {
+  overflow: hidden;
+}
+
+
+
+.slide,
+.homebut {
+  /* Other button styles */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Added smooth transition effect */
+}
+
+.slide:hover,
+.homebut:hover {
+  transform: translateY(-30px); /* Add a slight lift on hover */
+}
+
+.slide:hover,
+.homebut:active {
+  transform: translateY(15px); /* Add a slight press effect when clicked */
+}
