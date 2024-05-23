@@ -8,9 +8,59 @@
 
 }
 
+
 /* Styles for header */
 header {
   background-image: url(header.png);
+  padding: 5px;
+  font-family: 'Roboto Slab';
+  font-size: 25px;
+  letter-spacing: 0px;
+  word-spacing: 4.4px;
+  color: #f0f8ff;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.headertext {
+  margin: 0;
+  padding: 0;
+}
+
+.homebut {
+  background-color: #01732d; /* Change as needed */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-family: 'Roboto Slab';
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.homebut:hover {
+  background-color: #FC934F; /* Change as needed */
+}
+
+
+.headertext {
   padding: 20px;
   font-family: 'Roboto Slab';
   font-size: 25px;
@@ -22,15 +72,12 @@ header {
   font-style: normal;
   font-variant: normal;
   text-transform: none;
-  width: 100%; 
-  box-sizing: border-box; 
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  z-index: 1000;
 }
 
+
+
 .logo-container {
+  flex-direction: row-reverse;
   position: fixed;
   top: 1px; /* Adjust as needed */
   right: 20px; /* Adjust as needed */
@@ -58,7 +105,7 @@ header {
 }
 
 /* Description box style */
-.description {
+.description   {
   position: relative;
   margin: 120px 650px 30px;
   width: 750px;
@@ -117,61 +164,11 @@ header {
   transform: secPage 2s ease-in-out;
 }
 
-.about {
-  opacity: 1;
-  position: fixed; /* Changed position to fixed */
-  top: 250px; /* Centering vertically */
-  left: 500px; /* Centering horizontally */
-  transform: translate(-50%, -50%);
-  width: 500px;
-  max-width: 90%;
-  height: auto;
-  border-radius: 30px;
-  padding: 40px;
-  background: linear-gradient(to bottom, #01732d, #FC934F);
-  font-family: 'Roboto', sans-serif;
-  font-size: 22px;
-  letter-spacing: 0.5px;
-  word-spacing: 2px;
-  color: #f0f8ff;
-  font-weight: 400;
-  text-decoration: none;
-  font-style: italic;
-  text-transform: none;
-  text-align: justify;
-  line-height: 1.6;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  transform: translate(-50%, -50%) translateY(0);
-}
-
-
-.homebut {
+.homebut{
   opacity: 0;
-  position: absolute;
-  bottom: -130px;
-  left: 1375px;
-  transform: translateX(-50%);
-  width: 130px;
-  height: 50px;
-  border-radius: 30px;
-  background: linear-gradient(145deg, #01732d,#FC934F); 
-  font-family: 'Roboto';  
-  font-size: 20px;
-  letter-spacing: 0px;
-  word-spacing: 4.4px;
-  color: #f0f8ff;
-  font-weight: 400;
-  text-decoration: none solid rgb(68, 68, 68);
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
-  text-align: center;
-  line-height: 10px;
-  transform: translateY(-80vh);
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  transition: transform 0.3s ease; /* Add smooth transition effect */
+
 }
+
 
 
 .no-scroll {
@@ -180,18 +177,15 @@ header {
 
 
 
-.slide,
-.homebut {
+.slide {
   /* Other button styles */
   transition: transform 0.5s ease, opacity 0.5s ease; /* Added smooth transition effect */
 }
 
-.slide:hover,
-.homebut:hover {
+.slide:hover {
   transform: translateY(-30px); /* Add a slight lift on hover */
 }
 
-.slide:hover,
-.homebut:active {
+.slide:hover{
   transform: translateY(15px); /* Add a slight press effect when clicked */
 }

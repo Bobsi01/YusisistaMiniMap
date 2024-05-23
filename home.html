@@ -5,39 +5,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body class="main">
-  <div class="bg3" img src="slidebg.png"></div>
+    <div class="bg3" img src="slidebg.png"></div>
 
-  <div class="logo-container">
-    <img src="map.ico" alt="Logo" class="logo">
-  </div>
+    <div class="logo-container">
+      <img src="map.ico" alt="Logo" class="logo">
+      
+    </div>
 
-  <div class="yusisi">
-    <img src="Yusisista map logo.ico" alt="Yusisista Logo">
-  </div>
-  <header>Yusisista Mini-map</header>
+    <div class="yusisi">
+      <img src="Yusisista map logo.ico" alt="Yusisista Logo">
+    </div>
 
-  <div class="description">Yusisista Minimap is a web-based application that provides students and visitors with 
-    easy access to navigate the UCC Congress campus, 
-    allowing them to locate desired facilities, offices,
-    and rooms with ease and efficiency.
-  </div>
-
-  <div class="bg1"></div>
-  <div class="bg2"></div>
-
-  <button id="getStartedButton" class="slide">Get started</button>
-
-  <div class="second-page">
-    <div class="about">Yusisista Minimap is a web-based application that provides students and visitors with 
+    <header>
+      <div class="header-content">
+        <p class="headertext">Yusisista Mini-map</p>
+        <button id="homeButton" class="homebut">Home</button>
+      </div>
+    </header>
+    
+    
+    <div class="description">Yusisista Minimap is a web-based application that provides students and visitors with 
       easy access to navigate the UCC Congress campus, 
       allowing them to locate desired facilities, offices,
       and rooms with ease and efficiency.
     </div>
-    <button id="homeButton" class="homebut">Home</button>
+
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+
+    <button id="getStartedButton" class="slide">Get started</button>
+
+    <div class="second-page">
+      
+      <div class="about">
+
+        
+
+      <div class="rowalign">
+
+        <div class="trybox">
+            <h1>1</h1>
+        </div>
+        <div class="trybox2">
+            <h1>2</h1>
+        </div>
+
+        <div class="buttonandfloor">
+    <div class="btncontainer">
+        
+        <h2>North Campus</h2>
+        <!-- Default buttons for buildings -->
+        <button class="button building-button" id="building1" onclick="showFloorsForBuilding1()">Building 1</button>
+        
+        <button class="button building-button" id="building2" onclick="showFloorsForBuilding2()">Building 2</button>
+        
+        <!-- Floor buttons for Building 1 -->
+        <button class="button" id="button1" style="display: none;" onclick="searchButton(1, 5)">5th floor</button>
+        <button class="button" id="button2" style="display: none;" onclick="searchButton(1, 4)">4th floor</button>
+        <button class="button" id="button3" style="display: none;" onclick="searchButton(1, 3)">3rd floor</button>
+        <button class="button" id="button4" style="display: none;" onclick="searchButton(1, 2)">2nd floor</button>
+        <button class="button" id="button5" style="display: none;" onclick="searchButton(1, 1)">1st floor</button>
+        <!-- Floor buttons for Building 2 -->
+        <button class="button" id="button6" style="display: none;" onclick="searchButton(2, 5)">5th floor</button>
+        <button class="button" id="button7" style="display: none;" onclick="searchButton(2, 4)">4th floor</button>
+        <button class="button" id="button8" style="display: none;" onclick="searchButton(2, 3)">3rd floor</button>
+        <button class="button" id="button9" style="display: none;" onclick="searchButton(2, 2)">2nd floor</button>
+        <button class="button" id="button10" style="display: none;" onclick="searchButton(2, 1)">1st floor</button>
+        <!-- Back button -->
+        <button class="button" id="button11" style="display: none;" onclick="goBack()">Building 1</button>
+        <button class="button" id="button12" style="display: none;" onclick="goBack()">Building 2</button>
+        <!-- Back button -->
+        <button class="button" id="button13" style="display: none;" onclick="goBack()">Back</button>
+
+        
+    </div> <!-- end of class row -->
+    <table class="floorindicator">
+        <tr>
+            <td class="floorlayout" colspan="2" id="social">Social Hall</td>
+        </tr>
+        <tr>
+            <td class="floorlayout" id="floor41">4-1</td>
+            <td class="floorlayout" id="floor42">4-2</td>
+        </tr>
+        <tr>
+            <td class="floorlayout" id="floor31">3-1</td>
+            <td class="floorlayout" id="floor32">3-2</td>
+        </tr>
+        <tr>
+            <td class="floorlayout" id="floor21">2-1</td>
+            <td class="floorlayout" id="floor22">2-2</td>
+        </tr>
+        <tr>
+            <td class="floorlayout" id="floor11">1-1</td>
+            <td class="floorlayout" id="floor12">1-2</td>
+        </tr>
+    </table>
   </div>
 
-  <script src="home.js"></script> <!-- Include JavaScript file -->
+    
+  </div>
+    </div>
+      </div>
+      
+
+    <script src="home.js"></script> <!-- Include JavaScript file -->
 </body>
 </html>

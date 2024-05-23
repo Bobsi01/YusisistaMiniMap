@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", function() {
   bgBlue.style.opacity = 0;
   secondPage.style.display = "none";
   about.style.transition = "transform 2s ease-in-out, opacity 2s ease-in-out";
-  homeBut.style.transition = "transform 2s ease-in-out, opacity 2s ease-in-out";
+ 
   about.style.transform = "translateY(100vh)"; // Start below the viewport
-  homeBut.style.transform = "translateY(100vh)"; // Start below the viewport
+  
 
   function disableScrolling() {
     document.body.classList.add('no-scroll');
