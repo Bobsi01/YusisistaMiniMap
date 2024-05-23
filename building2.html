@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            width: 700px;
+            height: 500px;
+            margin: auto;
+            border: 2px solid black;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #ffffff;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .item:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.02);
+        }
+        .hallway {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            grid-column: span 4;
+            font-size: 24px;
+            cursor: default; /* Disable pointer cursor */
+            border: 2px solid black;
+            border-radius: 10px;
+            
+        }
+        .b2bigroom {
+            grid-column: span 2;
+        }
+        .room102 {
+            grid-column: span 1;
+        }
+        .room101 {
+            grid-column: span 1;
+        }
+        .roomComfortroom {
+            grid-column: span 1;
+        }
+        .strairs-area {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            grid-column: span 1;
+            cursor: default; /* Disable pointer cursor */
+            border: 2px solid black;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        .room104{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            grid-column: span 1;
+            cursor: default; /* Disable pointer cursor */
+            border: 2px solid black;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        .Room103 {
+            grid-column: span 1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="item b2bigroom" onclick="alert('Room Registrar clicked')">Registrar</div>
+    <div class="item room102" onclick="alert('Roomm101 clicked')">Room 102</div>
+    <div class="item room101" onclick="alert('Room 101 clicked')">Room 101</div>
+    <div class="hallway">HALL WAY</div>
+    <div class="item roomComfortroom" onclick="alert('Room Comfortroom clicked')"> Comfort room</div>
+    <div class="strairs-area" onclick="alert('strairs-area clicked')">-----Stairs area------</div>
+    <div class="item room104" onclick="alert('Room 103 clicked')">Room 104 </div>
+    <div class="item Room103" onclick="alert('Room 103 clicked')">Room 103</div>
+</div>
+
+</body>
+</html>
