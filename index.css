@@ -70,13 +70,13 @@ body{
     box-shadow: 0 0 0 0 black;
     margin-top: 5px;
     margin-bottom: 5px;
-    
+        
 }
 
 
 .button:hover,
 .button:focus {
-    background-color: #e89d3a48;
+    background-color: #f8ad4bc0;
     color: rgb(0, 0, 0);
     box-shadow: 2px 5px 0 0 #00732ca9;
 }
@@ -132,6 +132,11 @@ body{
 #floor12 {
     background-color: #ffffffde;
 }
+
+.slide:hover, .scaleOnHover:hover {
+    transform: scale(1.05);
+    background-color: #fba523e7;
+  }
 
 
 

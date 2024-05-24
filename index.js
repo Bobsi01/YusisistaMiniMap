@@ -159,6 +159,15 @@ function goBack() {
     // Show both building buttons again
     document.getElementById('building1').style.display = 'inline-block';
     document.getElementById('building2').style.display = 'inline-block';
+    let floors = [11, 21, 31, 41, 12, 22, 32, 42, 'social'];
+
+        floors.forEach(floor => {
+        let element = document.getElementById('floor' + floor);
+        if (element) {
+            element.style.backgroundColor = '#ffffffde';
+        }
+        });
+        document.getElementById('social').style.backgroundColor = '#ffffffde';
 
     // Hide the back button
     document.getElementById('button13').style.display = 'none';

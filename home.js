@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const about = document.querySelector(".about");
   const homeBut = document.querySelector(".homebut");
   const slide = document.querySelector(".slide");
+  const slidehover = document.querySelector(".slide:hover");
   const secondPage = document.querySelector(".second-page");
   const yusisi = document.querySelector(".yusisi");
 
@@ -78,6 +79,11 @@ document.addEventListener("DOMContentLoaded", function() {
     homeBut.style.transition = "opacity 2s ease-in-out";
     homeBut.style.opacity = 0;
 
+    var slides = document.querySelectorAll('.slide');
+    slides.forEach(function(slide) {
+        slide.classList.toggle('scaleOnHover');
+    });
+
     setTimeout(function() {
       // Slide down elements on the first page
       
@@ -95,8 +101,10 @@ document.addEventListener("DOMContentLoaded", function() {
       secondPage.style.transition = "opacity 2s ease-in-out"; // Add this line
       secondPage.style.opacity = 0; 
 
+
       setTimeout(function() {
         secondPage.style.visibility = "hidden";
+       d
         enableScrolling(); // Enable scrolling after the second page hides
       }, 1500); // Wait for the second page elements to slide down before hiding the second page
     }, 500); // Wait for the background to fade out
