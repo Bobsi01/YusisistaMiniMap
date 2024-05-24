@@ -12,9 +12,13 @@
   position: relative;
   bottom: 50px;
   left: 100px;
-  width: 350px;
-  height: 500px;
-  padding-left: 30px;
+  width: 450px;
+  height: 650px;
+  padding-left: 50px;
+}
+
+.logo{
+  margin-left: 40px;
 }
 
 /* Styles for header */
@@ -48,7 +52,8 @@ header {
 .headertext {
   margin: 0;
   padding: 0;
-  margin-right: 450px;
+  margin-right: 700px;
+  
   font-family: sans-serif;
   font-size: 40px; 
   padding-top: 20px;
@@ -57,23 +62,14 @@ header {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
 }
 
-.homebut {
-  background-color: #01732d; /* Change as needed */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin-left: 40px;
-  border-radius: 5px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.homebut{
+
+  transition: color 0.3s ease; /* Transition for text color change */
+  transition: box-shadow 0.3s ease; /* Transition for shadow effect */
+  transition: color 0.3s ease, transform 0.3s ease; /* Add transition for transform */
 }
 
-.homebut:hover {
-  background-color: #FF9800; /* Change as needed */
-}
-.buttondesign {
+.buttondesign, .homebut {
   background-color: transparent; /* Make background transparent */
   color: #01732d; /* Set the initial text color */
   border: none;
@@ -88,7 +84,7 @@ header {
   
 }
 
-.buttondesign:hover {
+.buttondesign:hover, .homebut:hover {
   color: #fba423; /* Change text color on hover */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   box-shadow: none; /* Remove any shadow */
@@ -96,7 +92,7 @@ header {
 }
 
 
-a {
+a, #homeButton {
   font-family: sans-serif;
   font-size: 25px;
   text-decoration: none;
@@ -106,12 +102,14 @@ a {
   transition: color 0.3s ease, transform 0.3s ease; /* Add transition for transform */
 }
 
-a:hover {
+a:hover, #homeButton:hover {
   color: #fba423; /* Change text color on hover */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   box-shadow: none; /* Remove any shadow */
-  transform: scale(1.05   ); /* Slightly increase the size */
+  transform: scale(1.05); /* Slightly increase the size */
 }
+
+
 
 
 
@@ -143,22 +141,23 @@ a:hover {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background-image: url(slidebg.png);
+  
   transition: opacity 2s ease-in-out;
 }
 
 /* Description box style */
 .description   {
   position: relative;
+  left: 100px;
   margin: 200px 650px 30px;
   width: 750px;
-  height: 225px;
+  height: 300px;
   border-radius: 30px;
   padding: 40px; /* Adjusted padding for better content placement */
   padding-top: 60px;
   background: #01732d;
   font-family: sans-serif; /* Changed font-family to serif for a more classic feel */
-  font-size: 22px; /* Slightly reduced font size for better readability */
+  font-size: 25px; /* Slightly reduced font size for better readability */
   letter-spacing: 0.5px; /* Added slight letter spacing for clarity */
   word-spacing: 2px; /* Reduced word spacing for better readability */
   color: #f0f8ff; /* Changed text color to off-white for better contrast */
@@ -176,17 +175,21 @@ a:hover {
 
 .slide {
   position: relative;
-  margin-left: 140vh;
-  width: 150px;
+  bottom: 150px;
+  left: 50px;
+  margin-left: 50vh;
+  width: 350px;
   height: 100px;
   border-radius: 30px;
-  background: linear-gradient(145deg, #01732d, #FF9800);
-  font-family: 'Roboto', sans-serif;
+  background: #d68d1f;
+  font-family: sans-serif;
   font-size: 20px;
   letter-spacing: 0.5px;
   word-spacing: 2px;
   color: #f0f8ff;
-  font-weight: 400;
+  font-size: 30px;
+  font-weight: 900;
+
   text-decoration: none;
   font-style: normal;
   text-transform: none;
@@ -201,12 +204,14 @@ a:hover {
 /* Styles for the second page */
 .second-page {
   display: none; /* Initially hidden */
-  position: relative;
+  position: absolute;
+  top: 105px;
   width: 100%;
   height: 100%;
-  background-color: white;
-  transform: secPage 2s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.199);
 }
+
+
 
 .homebut{
   opacity: 0;

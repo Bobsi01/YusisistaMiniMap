@@ -1,8 +1,10 @@
 /* Add gradient header style */
 body{
     background-color: #ffffffde;
-    background-image: url('bg.png');
+    background-image: url('slidebg.png');
     background-size: cover;
+    margin: 0;
+    overflow: hidden;
 
 }
 
@@ -12,7 +14,7 @@ body{
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: row;
-    margin-top: 30px;
+    margin-top: 70px;
 }
 
 .trybox
