@@ -477,6 +477,244 @@ body{
     opacity: 1;
 }
 
+.building1floor1 {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 1050px;
+    height: 650px;
+    margin: auto;
+    border: 2px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    visibility: hidden;
+    font-weight: bolder;
+
+
+}
+
+.building1floor2 {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 1050px;
+    height: 650px;
+    margin: auto;
+    border: 2px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    visibility: hidden;
+    font-weight: bolder;
+}
+
+.building1floor3 {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 1050px;
+    height: 650px;
+    margin: auto;
+    border: 2px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    visibility: hidden;
+    font-weight: bolder;
+
+}
+
+.building1floor4 {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 1050px;
+    height: 650px;
+    margin: auto;
+    border: 2px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    visibility: hidden;
+    font-weight: bolder;
+
+}
+
+.building1floor5 {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 1050px;
+    height: 650px;
+    margin: auto;
+    border: 2px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    visibility: hidden;
+    font-weight: bolder;
+
+}
+
+.item {
+    display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #ffffff;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+}
+
+
+.item:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.02);
+
+}
+
+.hallway {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    grid-column: span 4;
+    font-size: 24px;
+    cursor: default; /* Disable pointer cursor */
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/* Big room 1 */
+.b1bigroom1 {
+    grid-column: span 1;
+}
+
+/* Big room 2 */
+.b1bigroom2 {
+    grid-column: span 1;
+}
+
+/* Big room 3 */
+.b1bigroom3 {
+    grid-column: span 1;
+}
+
+/* Big room 4 */
+.b1bigroom4 {
+    grid-column: span 1;
+}
+
+/* Room 106 */
+.room106 {
+    grid-column: span 1;
+}
+
+/* Room 107 */
+.room107 {
+    grid-column: span 2;
+}
+
+/* Room 108 */
+.room108 {
+    grid-column: span 1;
+}
+
+/* Room 109 */
+.room109 {
+    grid-column: span 1;
+}
+
+/* Room 206 */
+.room206 {
+    grid-column: span 1;
+}
+
+/* Room 207 */
+.room207 {
+    grid-column: span 2;
+}
+
+/* Room 208 */
+.room208 {
+    grid-column: span 1;
+}
+
+/* Room 209 */
+.room209 {
+    grid-column: span 1;
+}
+
+/* Room 306 */
+.room306 {
+    grid-column: span 1;
+}
+
+/* Room 307 */
+.room307 {
+    grid-column: span 2;
+}
+
+/* Room 308 */
+.room308 {
+    grid-column: span 1;
+}
+
+/* Room 309 */
+.room309 {
+    grid-column: span 1;
+}
+
+/* Room 406 */
+.room406 {
+    grid-column: span 1;
+}
+
+/* Room 407 */
+.room407 {
+    grid-column: span 2;
+}
+
+/* Room 408 */
+.room408 {
+    grid-column: span 1;
+}
+
+/* Room 409 */
+.room409 {
+    grid-column: span 1;
+}
+
+.roomComfortroom {
+    grid-column: span 1;
+}
+
+.stairs-area {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    grid-column: span 1;
+    cursor: default; /* Disable pointer cursor */
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+
+}
+
+
 
 
 /* -------------------FLOOR INDICATOR---------------------------*/

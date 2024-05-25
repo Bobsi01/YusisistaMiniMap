@@ -7,6 +7,12 @@ var building2floor1 = document.querySelector('.building2floor1');
 var building2floor2 = document.querySelector('.building2floor2');
 var building2floor3 = document.querySelector('.building2floor3');
 var building2floor4 = document.querySelector('.building2floor4');
+var building2floor5 = document.querySelector('.building2floor5');
+var building1floor1 = document.querySelector('.building1floor1');
+var building1floor2 = document.querySelector('.building1floor2');
+var building1floor3 = document.querySelector('.building1floor3');
+var building1floor4 = document.querySelector('.building1floor4');
+var building1floor5 = document.querySelector('.building1floor5');
 var logoimg = document.querySelector('.logoimg');
 var fblink = document.querySelector('#fblink');
 var weblink = document.querySelector('#weblink');
@@ -23,6 +29,13 @@ function hideAllFloors() {
     building2floor2.style.visibility = 'hidden';
     building2floor3.style.visibility = 'hidden';
     building2floor4.style.visibility = 'hidden';
+    building2floor5.style.visibility = 'hidden';
+    building1floor1.style.visibility = 'hidden';
+    building1floor2.style.visibility = 'hidden';
+    building1floor3.style.visibility = 'hidden';
+    building1floor4.style.visibility = 'hidden';
+    building1floor5.style.visibility = 'hidden';
+
 }
 
 // Function to handle button clicks and show floor buttons for building 1
@@ -191,7 +204,12 @@ function goBack() {
         setTimeout(function() {
             informationheader.textContent = "University of Caloocan City";
             informationdetails.innerHTML = "a public-type local university established in 1971 and formerly called Caloocan City Community College and Caloocan City Polytechnic College. The University of Caloocan City was formed in 2004 out of Caloocan City Polytechnic College (CCPC), which started as a two-year course college in 1971 and offered four-year courses in 1975.";
-
+            fblink.textContent = "University of Caloocan City";
+            weblink.textContent = "UCC";
+            logoimg.src = 'ucclogo.png';
+            fafacebok.href = 'https://www.facebook.com/univofcaloocanofficial';
+            fblink.href = 'https://www.facebook.com/univofcaloocanofficial';
+            weblink.href = 'https://ucc-caloocan.edu.ph/';
             // Remove the 'fade' class and add the 'fade-in' class to start the fade in effect
             informationheader.classList.remove('fade');
             informationheader.classList.add('fade-in');
@@ -252,15 +270,80 @@ function searchButton(building, floor) {
     if (building === 1) {
         if (floor === 1) {
             document.getElementById('floor11').style.backgroundColor = 'red';
+            if (building2floor4) {
+                hideAllFloors();
+                building1floor1.style.visibility = 'visible';
+
+                informationheader.textContent = "University of Caloocan City";
+                informationdetails.innerHTML = "a public-type local university established in 1971 and formerly called Caloocan City Community College and Caloocan City Polytechnic College. The University of Caloocan City was formed in 2004 out of Caloocan City Polytechnic College (CCPC), which started as a two-year course college in 1971 and offered four-year courses in 1975.";
+                fblink.textContent = "University of Caloocan City";
+                weblink.textContent = "UCC";
+                logoimg.src = 'ucclogo.png';
+                fafacebok.href = 'https://www.facebook.com/univofcaloocanofficial';
+                fblink.href = 'https://www.facebook.com/univofcaloocanofficial';
+                weblink.href = 'https://ucc-caloocan.edu.ph/';
+            }
             
         } else if (floor === 2) {
             document.getElementById('floor21').style.backgroundColor = 'red';
+            if (building2floor4) {
+                hideAllFloors();
+                building1floor2.style.visibility = 'visible';
+
+            informationheader.textContent = "Bachelor of Secondary Education Major in English";
+            informationdetails.innerHTML = "<br><br>This floor is managed by Bachelor of Secondary Education Major in English<br><br>a comprehensive program that offers students a strong foundation in education and communication. Students will gain knowledge and skills in teaching, curriculum development, assessment, and classroom management.";
+            fblink.textContent = "University of Caloocan City";
+            weblink.textContent = "UCC";
+            logoimg.src = 'ucclogo.png';
+            fafacebok.href = 'https://www.facebook.com/univofcaloocanofficial';
+            fblink.href = 'https://www.facebook.com/univofcaloocanofficial';
+            weblink.href = 'https://ucc-caloocan.edu.ph/';
+            }
         } else if (floor === 3) {
             document.getElementById('floor31').style.backgroundColor = 'red';
+            if (building2floor4) {
+                hideAllFloors();
+                building1floor3.style.visibility = 'visible';
+
+            informationheader.textContent = "BSED major in Science";
+            informationdetails.innerHTML = "This floor is managed by BSED major in Science <br><br> a 4-year teacher education program that produces science teachers for the secondary level. The degree program has a good number of chemistry and physics courses to enable the graduates to teach physical sciences courses";
+            fblink.textContent = "Science Department";
+            weblink.textContent = "----";
+            logoimg.src = 'ucclogo.png';
+            fafacebok.href = 'https://www.facebook.com/UCCScienceDept';
+            fblink.href = 'https://www.facebook.com/UCCScienceDept';
+            weblink.href = '';
+            }
         } else if (floor === 4) {
             document.getElementById('floor41').style.backgroundColor = 'red';
+            if (building2floor4) {
+                hideAllFloors();
+                building1floor4.style.visibility = 'visible';
+
+            informationheader.textContent = "BA Comm & BS Psych";
+            informationdetails.innerHTML = "This floor is managed by BA Comm & BS Psych <br><br> BA Comm and BS in Psych are two separate programs that share the same floor. The BA Communication program focuses on the study of communication theories, media, and journalism, while the BS Psychology program centers on the study of human behavior, mental processes, and psychological theories.";
+            fblink.textContent = "University of Caloocan City";
+            weblink.textContent = "UCC";
+            logoimg.src = 'claslogo.png';
+            fafacebok.href = 'https://www.facebook.com/univofcaloocanofficial';
+            fblink.href = 'https://www.facebook.com/univofcaloocanofficial';
+            weblink.href = 'https://ucc-caloocan.edu.ph/';
+            }
         } else if (floor === 5) {
             document.getElementById('social').style.backgroundColor = 'red';
+            if (building2floor4) {
+                hideAllFloors();
+                building1floor5.style.visibility = 'visible';
+
+            informationheader.textContent = "Social Hall";
+            informationdetails.innerHTML = "Social Hall is a place where students can gather and socialize. <br><br> The Social Hall is used for various events and activities such as seminars, workshops, and student organization meetings. <br><br> The Social Hall is also used for student performances, exhibits, and other cultural events.";
+            fblink.textContent = "University of Caloocan City";
+            weblink.textContent = "UCC";
+            logoimg.src = 'ucclogo.png';
+            fafacebok.href = 'https://www.facebook.com/univofcaloocanofficial';
+            fblink.href = 'https://www.facebook.com/univofcaloocanofficial';
+            weblink.href = 'https://ucc-caloocan.edu.ph/';
+            }
         }
     } else if (building === 2) {
         if (floor === 1) {
@@ -279,7 +362,7 @@ function searchButton(building, floor) {
                 hideAllFloors();
                 building2floor2.style.visibility = 'visible';
             }
-                informationheader.textContent = "Department of Tourism and Hospitality Industry Management";
+                informationheader.textContent = "The Department of Tourism and Hospitality Industry Management";
                 informationdetails.innerHTML = "<br><br>The Department of Tourism and Hospitality Industry Management offers a practical education in tourism and hospitality, covering customer service, event management, hotel operations, and marketing. Through partnerships with industry players, students gain real-world experience for careers in these fields.";
                 fblink.textContent = "no information available ";
                 weblink.textContent = "---";
@@ -307,7 +390,7 @@ function searchButton(building, floor) {
                 hideAllFloors();
                 building2floor4.style.visibility = 'visible';
 
-                informationheader.textContent = "Bachelor of Public Administration Department";
+                informationheader.textContent = "Bachelor of Public Administration";
                 informationdetails.innerHTML = "<br>This floor is managed by the Bachelor of Public Administration Department.<br><br>The Bachelor of Public Administration Department teaches students about public sector management, policies, and governance. It equips them with skills in leadership, policy analysis, and organizational management for careers in government and related fields.";
                 fblink.textContent = "ucclingkodbayan";
                 weblink.textContent = "---";
@@ -317,6 +400,20 @@ function searchButton(building, floor) {
             }
         } else if (floor === 5) {
             document.getElementById('social').style.backgroundColor = 'red';
+            if (building2floor4) {
+                hideAllFloors();
+                building2floor5.style.visibility = 'visible';
+
+            informationheader.textContent = "Social Hall";
+            informationdetails.innerHTML = "Social Hall is a place where students can gather and socialize. <br><br> The Social Hall is used for various events and activities such as seminars, workshops, and student organization meetings. <br><br> The Social Hall is also used for student performances, exhibits, and other cultural events.";
+            fblink.textContent = "University of Caloocan City";
+            weblink.textContent = "UCC";
+            logoimg.src = 'ucclogo.png';
+            fafacebok.href = 'https://www.facebook.com/univofcaloocanofficial';
+            fblink.href = 'https://www.facebook.com/univofcaloocanofficial';
+            weblink.href = 'https://ucc-caloocan.edu.ph/';
+            }
+           
         }
     }
 }
@@ -497,5 +594,48 @@ function showEMC() {
     }
 }
 
+
+function showlibrary() {
+    if (informationheader) {
+        // Add the 'fade' class to start the fade out effect
+        informationheader.classList.add('fade');
+        informationdetails.classList.add('fade');
+
+        // After the fade out effect is complete, change the text and start the fade in effect
+        setTimeout(function() {
+            informationheader.textContent = "Library Room";
+            informationdetails.innerHTML = "The University's Library is a place where students can study and do research. <br><br> The library has a collection of books, journals, and other resources that students can use for their academic needs. <br><br> The library also provides computers and internet access for students who need to do research online.";
+            fblink.textContent = "University of Caloocan City";
+            weblink.textContent = "UCC";
+            logoimg.src = 'ucclogo.png';
+            fafacebok.href = 'https://www.facebook.com/univofcaloocanofficial';
+            fblink.href = 'https://www.facebook.com/univofcaloocanofficial';
+            weblink.href = 'https://ucc-caloocan.edu.ph/';
+            informationheader.classList.add('fade-in');
+            informationdetails.classList.add('fade-in');
+        }, 500); // The timeout should be the same as the transition duration in the CSS
+    }
+}
+function showsharedrooms() {
+    if (informationheader) {
+        // Add the 'fade' class to start the fade out effect
+        informationheader.classList.add('fade');
+        informationdetails.classList.add('fade');
+
+        // After the fade out effect is complete, change the text and start the fade in effect
+        setTimeout(function() {
+            informationheader.textContent = "Room 106, 107, 108, and 109 ";
+            informationdetails.innerHTML = "<br><br>This room is used by the following programs: <br><br>Bachelor of Secondary Education Major in English <br><br> Bachelor of Secondary Education Major in English-Chinese <br><br> Bachelor in Secondary Education Major in Technology and Livelihood Education.  ";
+            fblink.textContent = "University of Caloocan City";
+            weblink.textContent = "UCC";
+            logoimg.src = 'ucclogo.png';
+            fafacebok.href = 'https://www.facebook.com/univofcaloocanofficial';
+            fblink.href = 'https://www.facebook.com/univofcaloocanofficial';
+            weblink.href = 'https://ucc-caloocan.edu.ph/';
+            informationheader.classList.add('fade-in');
+            informationdetails.classList.add('fade-in');
+        }, 500); // The timeout should be the same as the transition duration in the CSS
+    }
+}
 
 
