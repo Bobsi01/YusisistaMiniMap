@@ -3,8 +3,33 @@ var logoimg = document.querySelector('.logoimg');
 var informationheader = document.querySelector('.informationheader');
 var informationdetails = document.querySelector('.informationdetails');
 var infomationcontact = document.querySelector('.infomationcontact');
-var building1floor1 = document.querySelector('.building1floor1');
+var building2floor1 = document.querySelector('.building2floor1');
+var building2floor2 = document.querySelector('.building2floor2');
+var building2floor3 = document.querySelector('.building2floor3');
+var building2floor4 = document.querySelector('.building2floor4');
+var logoimg = document.querySelector('.logoimg');
+var fblink = document.querySelector('#fblink');
+var weblink = document.querySelector('#weblink');
+var fafacebok = document.querySelector('.fa-facebook');
+var faweb = document.querySelector('.fa-globe');
+
+
+
+
+
+function hideAllFloors() {
+    defaultMap.style.visibility = 'hidden';
+    building2floor1.style.visibility = 'hidden';
+    building2floor2.style.visibility = 'hidden';
+    building2floor3.style.visibility = 'hidden';
+    building2floor4.style.visibility = 'hidden';
+}
+
 // Function to handle button clicks and show floor buttons for building 1
+
+
+
+
 function showFloorsForBuilding1() {
     // Hide both building buttons
     document.getElementById('building1').style.display = 'none';
@@ -198,11 +223,11 @@ function goBack() {
 
     // Set its visibility to visible
     if (defaultMap) {
+        hideAllFloors() 
         defaultMap.style.visibility = 'visible';
+        logoimg.src = 'ucclogo.png';
     }
-    if (building1floor1) {
-        building1floor1.style.visibility = 'hidden';
-    }
+   
     // Hide the back button
     document.getElementById('button13').style.display = 'none';
 
@@ -227,12 +252,7 @@ function searchButton(building, floor) {
     if (building === 1) {
         if (floor === 1) {
             document.getElementById('floor11').style.backgroundColor = 'red';
-            if (defaultMap) {
-                defaultMap.style.visibility = 'hidden';
-            }
-            if (building1floor1) {
-                building1floor1.style.visibility = 'visible';
-            }
+            
         } else if (floor === 2) {
             document.getElementById('floor21').style.backgroundColor = 'red';
         } else if (floor === 3) {
@@ -245,12 +265,40 @@ function searchButton(building, floor) {
     } else if (building === 2) {
         if (floor === 1) {
             document.getElementById('floor12').style.backgroundColor = 'red';
+            if (defaultMap) {
+                defaultMap.style.visibility = 'hidden';
+                
+            }
+            if (building2floor1) {
+                hideAllFloors();
+                building2floor1.style.visibility = 'visible';
+            }
         } else if (floor === 2) {
             document.getElementById('floor22').style.backgroundColor = 'red';
+            if (building2floor2) {
+                hideAllFloors();
+                building2floor2.style.visibility = 'visible';
+            }
+                informationheader.textContent = "Management Information System Office";
+                informationdetails.innerHTML = "<br>The Management Information System Office is responsible in handling the university's information system. <br><br> The office is responsible in managing the university's AIMS Portal and ensuring that all data are organized and correct. <br><br> Office Hours: <br><br>Monday - Friday <br> 8:00 AM - 5:00 PM";
+                fblink.textContent = "UCC MIS - North ";
+                weblink.textContent = "MIS NORTH ";
+                logoimg.src = 'misnorthlogo.jpg';
+                fafacebok.href = 'https://www.facebook.com/uccmisnorth';
+                fblink.href = 'https://www.facebook.com/uccmisnorth';
+            
         } else if (floor === 3) {
             document.getElementById('floor32').style.backgroundColor = 'red';
+            if (building2floor3) {
+                hideAllFloors();
+                building2floor3.style.visibility = 'visible';
+            }
         } else if (floor === 4) {
             document.getElementById('floor42').style.backgroundColor = 'red';
+            if (building2floor4) {
+                hideAllFloors();
+                building2floor4.style.visibility = 'visible';
+            }
         } else if (floor === 5) {
             document.getElementById('social').style.backgroundColor = 'red';
         }
@@ -293,4 +341,61 @@ function showroom101() {
         }, 500); // The timeout should be the same as the transition duration in the CSS
     }
 }
+
+function showMIS() {
+    if (informationheader) {
+        // Add the 'fade' class to start the fade out effect
+        informationheader.classList.add('fade');
+        informationdetails.classList.add('fade');
+
+        // After the fade out effect is complete, change the text and start the fade in effect
+        setTimeout(function() {
+            informationheader.textContent = "Management Information System Office";
+            informationdetails.innerHTML = "<br>The Management Information System Office is responsible in handling the university's information system. <br><br> The office is responsible in managing the university's AIMS Portal and ensuring that all data are organized and correct. <br><br> Office Hours: <br><br>Monday - Friday <br> 8:00 AM - 5:00 PM";
+            fblink.textContent = "UCC MIS - North ";
+            weblink.textContent = "MIS NORTH ";
+            logoimg.src = 'misnorthlogo.jpg';
+            fafacebok.href = 'https://www.facebook.com/uccmisnorth';
+            fblink.href = 'https://www.facebook.com/uccmisnorth';
+            informationheader.classList.add('fade-in');
+            informationdetails.classList.add('fade-in');
+        }, 500); // The timeout should be the same as the transition duration in the CSS
+    }
+}
+
+function show104() {
+    if (informationheader) {
+        // Add the 'fade' class to start the fade out effect
+        informationheader.classList.add('fade');
+        informationdetails.classList.add('fade');
+
+        // After the fade out effect is complete, change the text and start the fade in effect
+        setTimeout(function() {
+            informationheader.textContent = "Room 103 & 104";
+            informationdetails.innerHTML = "This room is used by the following programs: <br><br>Bachelor of Secondary Education Major in English <br><br> Bachelor of Secondary Education Major in English-Chinese <br><br> Bachelor in Secondary Education Major in Technology and Livelihood Education.  ";
+
+            informationheader.classList.add('fade-in');
+            informationdetails.classList.add('fade-in');
+        }, 500); // The timeout should be the same as the transition duration in the CSS
+    }
+}
+
+function show103() {
+    if (informationheader) {
+        // Add the 'fade' class to start the fade out effect
+        informationheader.classList.add('fade');
+        informationdetails.classList.add('fade');
+
+        // After the fade out effect is complete, change the text and start the fade in effect
+        setTimeout(function() {
+            informationheader.textContent = "Room 103 & 104";
+            informationdetails.innerHTML = "This room is used by the following programs: <br><br>Bachelor of Secondary Education Major in English <br><br> Bachelor of Secondary Education Major in English-Chinese <br><br> Bachelor in Secondary Education Major in Technology and Livelihood Education.  ";
+
+            informationheader.classList.add('fade-in');
+            informationdetails.classList.add('fade-in');
+        }, 500); // The timeout should be the same as the transition duration in the CSS
+    }
+}
+
+
 

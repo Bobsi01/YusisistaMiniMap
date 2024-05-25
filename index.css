@@ -245,7 +245,8 @@ body{
     background-color: #fba523e7;
   }
 
-.building1floor1 {
+.building2floor1 {
+    position: absolute;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: repeat(4, 1fr);
@@ -261,7 +262,8 @@ body{
     font-weight: bolder;
 }
 
-.building1floor2 {
+.building2floor2 {
+    position: absolute;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: repeat(4, 1fr);
@@ -277,7 +279,8 @@ body{
     font-weight: bolder;
 }
 
-.building1floor3 {
+.building2floor3 {
+    position: absolute;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: repeat(4, 1fr);
@@ -293,7 +296,8 @@ body{
     font-weight: bolder;
 }
 
-.building1floor4 {
+.building2floor4 {
+    position: absolute;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: repeat(4, 1fr);
@@ -309,7 +313,8 @@ body{
     font-weight: bolder;
 }
 
-.building1floor5 {
+.building2floor5 {
+    position: absolute;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: repeat(4, 1fr);
@@ -351,15 +356,103 @@ body{
     border-radius: 10px;
     
 }
-.b2bigroom {
+/* Big room 1 */
+.b2bigroom1 {
     grid-column: span 2;
 }
-.room102 {
-    grid-column: span 1;
+
+/* Big room 2 */
+.b2bigroom2 {
+    grid-column: span 2;
 }
+
+/* Big room 3 */
+.b2bigroom3 {
+    grid-column: span 2;
+}
+
+/* Big room 4 */
+.b2bigroom4 {
+    grid-column: span 2;
+}
+
+/* Room 101 */
 .room101 {
     grid-column: span 1;
 }
+/* Room 102 */
+.room102 {
+    grid-column: span 1;
+}
+/* Room 103 */
+.room103 {
+    grid-column: span 1;
+}
+/* Room 104 */
+.room104 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    grid-column: span 1;
+    cursor: default; /* Disable pointer cursor */
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/* Room 201 */
+.room201 {
+    grid-column: span 1;
+}
+/* Room 202 */
+.room202 {
+    grid-column: span 1;
+}
+/* Room 203 */
+.room203 {
+    grid-column: span 1;
+}
+/* Room 204 */
+.room204 {
+    grid-column: span 1;
+}
+
+/* Room 301 */
+.room301 {
+    grid-column: span 1;
+}
+/* Room 302 */
+.room302 {
+    grid-column: span 1;
+}
+/* Room 303 */
+.room303 {
+    grid-column: span 1;
+}
+/* Room 304 */
+.room304 {
+    grid-column: span 1;
+}
+
+/* Room 401 */
+.room401 {
+    grid-column: span 1;
+}
+/* Room 402 */
+.room402 {
+    grid-column: span 1;
+}
+/* Room 403 */
+.room403 {
+    grid-column: span 1;
+}
+/* Room 404 */
+.room404 {
+    grid-column: span 1;
+}
+
+
+
 .roomComfortroom {
     grid-column: span 1;
 }
@@ -373,19 +466,7 @@ body{
     border-radius: 10px;
     font-size: 16px;
 }
-.room104{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    grid-column: span 1;
-    cursor: default; /* Disable pointer cursor */
-    border: 2px solid black;
-    border-radius: 10px;
-    font-size: 16px;
-}
-.Room103 {
-    grid-column: span 1;
-}
+
 
 .fade {
     opacity: 0;
