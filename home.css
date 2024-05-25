@@ -11,10 +11,15 @@
 .yusisilogo{
   position: relative;
   bottom: 50px;
-  left: 100px;
+  left: 150px;
   width: 450px;
   height: 650px;
   padding-left: 50px;
+  transition: transform 0.3s ease;
+}
+.yusisilogo:hover{
+  transform: scale(1.05);
+
 }
 
 .logo{
@@ -57,7 +62,8 @@ header {
   margin: 0;
   padding: 0;
   margin-right: 700px;
-  
+  color: #FFFFCC;
+  font-style: italic;
   font-family: sans-serif;
   font-size: 35px; 
   padding-top: 20px;
@@ -101,7 +107,7 @@ a, #homeButton {
   font-size: 25px;
   text-decoration: none;
   color: white;
-  font-weight: bold;
+  font-weight: 800;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   transition: color 0.3s ease, transform 0.3s ease; 
   transition: transform 0.3s ease; /* Add smooth transition effect */
@@ -114,7 +120,20 @@ a:hover, #homeButton:hover {
   transform: scale(1.05); /* Slightly increase the size */
 }
 
+#fblink{
+  position: relative;
+  right: 25px;
+  font-size: 15px;
+  font-weight: bold;
+  
+}
 
+#weblink{
+  position: relative;
+  right: 15px;
+  font-size: 15px;
+  font-weight: bold;
+}
 
 
 
@@ -153,26 +172,44 @@ a:hover, #homeButton:hover {
 /* Description box style */
 .description   {
   position: relative;
-  left: 100px;
+  left: 180px;
   margin: 200px 650px 30px;
   width: 750px;
   height: 300px;
   border-radius: 30px;
   padding: 40px; /* Adjusted padding for better content placement */
   padding-top: 60px;
-  background: #01732d;
-  font-family: sans-serif; /* Changed font-family to serif for a more classic feel */
-  font-size: 25px; /* Slightly reduced font size for better readability */
-  letter-spacing: 0.5px; /* Added slight letter spacing for clarity */
-  word-spacing: 2px; /* Reduced word spacing for better readability */
-  color: #f0f8ff; /* Changed text color to off-white for better contrast */
-  font-weight: 400; /* Changed font-weight to normal for better readability */
+  background: #0e853c;
+  font-family: sans-serif; 
+  font-size: 25px; 
+  letter-spacing: 0.5px; 
+  word-spacing: 2px; 
+  color: #f0f8ff;
   text-decoration: none;
   font-style: italic;
   text-transform: none;
   text-align: justify;
+  color: #FFFFCC;
   line-height: 1.6; /* Adjusted line height for better spacing */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added a subtle shadow for depth */
+}
+
+.descriptiontext{
+  position: relative;
+  bottom: 25px;
+  font-size: 25px; 
+  font-family: sans-serif; 
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.637); /* Add text shadow */
+}
+
+.campuslabel{
+  font-family: sans-serif; 
+  font-size: 30px; 
+  font-weight: 900;
+  color: #ffffcc;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.726); /* Add text shadow */
+
 }
 
 
@@ -181,7 +218,7 @@ a:hover, #homeButton:hover {
 .slide {
   position: relative;
   bottom: 150px;
-  left: 50px;
+  left: 120px;
   margin-left: 50vh;
   width: 350px;
   height: 100px;
@@ -199,6 +236,7 @@ a:hover, #homeButton:hover {
   text-transform: none;
   text-align: center;
   line-height: 1.5;
+  font-weight: bold;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   transition: transform 0.3s ease; /* Add smooth transition effect */
 }

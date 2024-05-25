@@ -1,4 +1,9 @@
-
+var defaultMap = document.querySelector('.defaultmap');
+var logoimg = document.querySelector('.logoimg');
+var informationheader = document.querySelector('.informationheader');
+var informationdetails = document.querySelector('.informationdetails');
+var infomationcontact = document.querySelector('.infomationcontact');
+var building1floor1 = document.querySelector('.building1floor1');
 // Function to handle button clicks and show floor buttons for building 1
 function showFloorsForBuilding1() {
     // Hide both building buttons
@@ -151,16 +156,38 @@ function showFloorsForBuilding2() {
 
 // Function to handle back button click
 function goBack() {
+
+    if (informationheader) {
+        // Add the 'fade' class to start the fade out effect
+        informationheader.classList.add('fade');
+        informationdetails.classList.add('fade');
+
+        // After the fade out effect is complete, change the text and start the fade in effect
+        setTimeout(function() {
+            informationheader.textContent = "University of Caloocan City";
+            informationdetails.innerHTML = "a public-type local university established in 1971 and formerly called Caloocan City Community College and Caloocan City Polytechnic College. The University of Caloocan City was formed in 2004 out of Caloocan City Polytechnic College (CCPC), which started as a two-year course college in 1971 and offered four-year courses in 1975.";
+
+            // Remove the 'fade' class and add the 'fade-in' class to start the fade in effect
+            informationheader.classList.remove('fade');
+            informationheader.classList.add('fade-in');
+            informationdetails.classList.remove('fade');
+            informationdetails.classList.add('fade-in');
+
+            // After the fade in effect is complete, 
+            setTimeout(function() {
+                informationheader.classList.remove('fade-in');
+                informationdetails.classList.remove('fade-in');
+            }, 500); // The timeout should be the same as the transition duration in the CSS
+        }, 500); // The timeout should be the same as the transition duration in the CSS
+    }
     // Hide floor buttons for both buildings
     for (let i = 1; i <= 13; i++) {
         document.getElementById('button' + i).style.display = 'none';
     }
-
     // Show both building buttons again
     document.getElementById('building1').style.display = 'inline-block';
     document.getElementById('building2').style.display = 'inline-block';
     let floors = [11, 21, 31, 41, 12, 22, 32, 42, 'social'];
-
         floors.forEach(floor => {
         let element = document.getElementById('floor' + floor);
         if (element) {
@@ -169,13 +196,18 @@ function goBack() {
         });
         document.getElementById('social').style.backgroundColor = '#ffffffde';
 
+    // Set its visibility to visible
+    if (defaultMap) {
+        defaultMap.style.visibility = 'visible';
+    }
+    if (building1floor1) {
+        building1floor1.style.visibility = 'hidden';
+    }
     // Hide the back button
     document.getElementById('button13').style.display = 'none';
+
+    
 }
-
-
-
-
 
 
 // Function to handle button clicks and change background color
@@ -186,10 +218,21 @@ function searchButton(building, floor) {
         cell.style.backgroundColor = '';
     });
 
+    // Select the element with the class 'defaultmap'
+    
+
     // Set background color based on floor and building
+
+    //ALL SWITCHING HERE
     if (building === 1) {
         if (floor === 1) {
             document.getElementById('floor11').style.backgroundColor = 'red';
+            if (defaultMap) {
+                defaultMap.style.visibility = 'hidden';
+            }
+            if (building1floor1) {
+                building1floor1.style.visibility = 'visible';
+            }
         } else if (floor === 2) {
             document.getElementById('floor21').style.backgroundColor = 'red';
         } else if (floor === 3) {
@@ -213,3 +256,41 @@ function searchButton(building, floor) {
         }
     }
 }
+
+//map handlers
+
+// Function to handle showregistrar click
+function showRegistrar() {
+    if (informationheader) {
+        // Add the 'fade' class to start the fade out effect
+        informationheader.classList.add('fade');
+        informationdetails.classList.add('fade');
+
+        // After the fade out effect is complete, change the text and start the fade in effect
+        setTimeout(function() {
+            informationheader.textContent = "Office of the Registrar";
+            informationdetails.innerHTML = "The University's Registrar is responsible in handling student's records and documents. <br><br> All student credentials can be requested in the registrar's office <br><br><br><br> Office Hours: <br><br>Monday - Friday <br> 8:00 AM - 5:00 PM";
+
+            informationheader.classList.add('fade-in');
+            informationdetails.classList.add('fade-in');
+        }, 500); // The timeout should be the same as the transition duration in the CSS
+    }
+}
+
+function showroom101() {
+    if (informationheader) {
+        // Add the 'fade' class to start the fade out effect
+        informationheader.classList.add('fade');
+        informationdetails.classList.add('fade');
+
+        // After the fade out effect is complete, change the text and start the fade in effect
+        setTimeout(function() {
+            informationheader.textContent = "Guidance & Nurse office";
+            informationdetails.innerHTML = "The Guidance and Nurse office is responsible in providing guidance and health services to the students. <br><br> The guidance office provides counseling services to students who are in need of emotional and psychological support. <br><br> The nurse office provides first aid and medical assistance to students who are in need of medical attention. <br><br>";
+
+            informationheader.classList.add('fade-in');
+            informationdetails.classList.add('fade-in');
+        }, 500); // The timeout should be the same as the transition duration in the CSS
+    }
+}
+
