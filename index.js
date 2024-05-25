@@ -322,12 +322,12 @@ function searchButton(building, floor) {
 
             informationheader.textContent = "BA Comm & BS Psych";
             informationdetails.innerHTML = "This floor is managed by BA Comm & BS Psych <br><br> BA Comm and BS in Psych are two separate programs that share the same floor. The BA Communication program focuses on the study of communication theories, media, and journalism, while the BS Psychology program centers on the study of human behavior, mental processes, and psychological theories.";
-            fblink.textContent = "University of Caloocan City";
-            weblink.textContent = "UCC";
+            fblink.textContent = "Psychology Society";
+            weblink.textContent = "----";
             logoimg.src = 'claslogo.png';
-            fafacebok.href = 'https://www.facebook.com/univofcaloocanofficial';
-            fblink.href = 'https://www.facebook.com/univofcaloocanofficial';
-            weblink.href = 'https://ucc-caloocan.edu.ph/';
+            fafacebok.href = 'https://www.facebook.com/UCCNorthPsychologySociety';
+            fblink.href = 'https://www.facebook.com/UCCNorthPsychologySociety';
+            weblink.href = '';
             }
         } else if (floor === 5) {
             document.getElementById('social').style.backgroundColor = 'red';
