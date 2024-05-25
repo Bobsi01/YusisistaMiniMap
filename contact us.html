@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="index.js"></script>
+    <script src="home.js"></script>
+    <title>Contact Us</title>
+    <style>
+
+        .square {
+            width: 500px;
+            height: 600px;
+            background-color: #dab063dc;
+            position: absolute;
+            top: 55%;
+            left: 10%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.644);
+        }
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            font-family: sans-serif;
+            font-size: 40px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group textarea {
+            resize: none; /* Make textarea not adjustable */
+            height: 100px; /* Updated height */
+        }
+        .form-group button {
+            width: 423px;
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-group button:hover {
+            background-color: #218838;
+        }
+        .headertext{
+            margin-right: 759px;
+        }
+        .large-image {
+            max-width: 400px;
+            max-height: 600px;
+            
+            flex-shrink: 0;
+            position: relative;
+            left: 1300px;
+            top: 160px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+          <img src="map.ico" alt="Logo" class="logo">
+          <p class="headertext">Yusisista Mini-map</p>
+          <button id="homeButton" ><a href="index.html">HOME</a></button>
+          <button id="aboutusButton" class="buttondesign"><a href="aboutus.html">ABOUT US</a></button>
+          <button id="contactusButton" class="buttondesign"><a href="contact us.html">CONTACT US</a></button>
+        </div>  
+      </header>
+
+<div class="square">
+    <div class="form-container">
+        <h2>Contact Us</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="form-group">
+                <button class="submitbutton" type="submit" onclick="('SUBMITTED')">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<img class="large-image" src="ucc.png" alt="Large Image">
+
+</body>
+</html>

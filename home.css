@@ -101,6 +101,10 @@ header {
   transform: scale(1.05); /* Slightly increase the size */
 }
 
+#homeButton{
+  border: 0;
+  background-color: #01732d00;
+}
 
 a, #homeButton {
   font-family: sans-serif;
