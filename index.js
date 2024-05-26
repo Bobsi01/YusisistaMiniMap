@@ -351,10 +351,20 @@ function searchButton(building, floor) {
             if (defaultMap) {
                 defaultMap.style.visibility = 'hidden';
                 
+                
             }
             if (building2floor1) {
                 hideAllFloors();
                 building2floor1.style.visibility = 'visible';
+
+                informationheader.textContent = "University of Caloocan City";
+                informationdetails.innerHTML = "a public-type local university established in 1971 and formerly called Caloocan City Community College and Caloocan City Polytechnic College. The University of Caloocan City was formed in 2004 out of Caloocan City Polytechnic College (CCPC), which started as a two-year course college in 1971 and offered four-year courses in 1975.";
+                fblink.textContent = "University of Caloocan City";
+                weblink.textContent = "UCC";
+                logoimg.src = 'ucclogo.png';
+                fafacebok.href = 'https://www.facebook.com/univofcaloocanofficial';
+                fblink.href = 'https://www.facebook.com/univofcaloocanofficial';
+                weblink.href = 'https://ucc-caloocan.edu.ph/';
             }
         } else if (floor === 2) {
             document.getElementById('floor22').style.backgroundColor = 'red';
